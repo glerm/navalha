@@ -1,48 +1,48 @@
 #N canvas 6 53 1268 686 10;
 #X declare -lib iem_tab;
 #X obj 106 266 hsl 795 12 0 1 0 0 \$0-end \$0-end-r empty -2 -8 0 10
--182874 -1 -1 16500 1;
+-182874 -1 -1 14111 1;
 #X obj 103 116 cnv 15 800 148 empty \$0-cnvtable empty 20 12 0 14 -224813
 -1 0;
-#X obj 246 116 cnv 15 24 148 empty \$0-selectarea 4 0 80 0 141 -195986
+#X obj 104 116 cnv 15 142 148 empty \$0-selectarea 0 0 80 0 141 -195986
 -247041 0;
 #N canvas 0 22 450 300 (subpatch) 0;
-#X array \$0-L 138240 float 2;
-#X coords 0 1 138240 -1 800 75 1;
+#X array \$0-L 81955 float 2;
+#X coords 0 1 81955 -1 800 75 1;
 #X restore 103 115 graph;
 #N canvas 0 22 450 300 (subpatch) 0;
-#X array \$0-R 138240 float 2;
-#X coords 0 1 138240 -1 800 75 1;
+#X array \$0-R 81955 float 2;
+#X coords 0 1 81955 -1 800 75 1;
 #X restore 103 190 graph;
 #X obj 106 103 hsl 795 12 0 1 0 0 \$0-start \$0-start-r empty -2 -8
-0 10 -182874 -1 -1 14100 1;
-#X text 431 464 engine segmentos;
+0 10 -182874 -1 -1 0 1;
+#X text 598 396 engine segmentos;
 #X obj 104 280 cnv 15 797 97 empty \$0-playercnv empty 20 12 0 14 -160781
 -1 0;
-#X obj 405 347 cnv 15 300 30 empty \$0-defaultpitchlabel Do-5 0 15
-1 24 -66057 -262144 0;
+#X obj 405 347 cnv 15 300 30 empty \$0-defaultpitchlabel Fa_sustenido-4
+0 15 1 24 -66057 -262144 0;
 #X obj 689 306 cnv 15 200 70 empty empty empty 0 7 1 12 -33289 -203904
 0;
 #X obj 107 289 cnv 15 500 30 empty empty empty 0 15 1 24 -123792 -262144
 0;
 #X obj 219 326 nbx 2 15 -1e+37 1e+37 0 0 \$0-seqC3-S \$0-seqC3-R empty
-0 -8 0 15 -33289 -203904 -1 4 256;
-#X obj 145 325 nbx 2 15 -1e+37 1e+37 0 0 \$0-seqC1-S \$0-seqC1-R empty
-0 -8 0 15 -33289 -203904 -1 6 256;
-#X obj 182 326 nbx 2 15 -1e+37 1e+37 0 0 \$0-seqC2-S \$0-seqC2-R empty
-0 -8 0 15 -33289 -203904 -1 5 256;
-#X obj 107 325 nbx 2 15 -1e+37 1e+37 0 0 \$0-seqC0-S \$0-seqC0-R empty
-0 -8 0 15 -16662 -203904 -1 7 256;
-#X obj 367 326 nbx 2 15 -1e+37 1e+37 0 0 \$0-seqC7-S \$0-seqC7-R empty
 0 -8 0 15 -33289 -203904 -1 0 256;
+#X obj 145 325 nbx 2 15 -1e+37 1e+37 0 0 \$0-seqC1-S \$0-seqC1-R empty
+0 -8 0 15 -33289 -203904 -1 7 256;
+#X obj 182 326 nbx 2 15 -1e+37 1e+37 0 0 \$0-seqC2-S \$0-seqC2-R empty
+0 -8 0 15 -33289 -203904 -1 6 256;
+#X obj 107 325 nbx 2 15 -1e+37 1e+37 0 0 \$0-seqC0-S \$0-seqC0-R empty
+0 -8 0 15 -16662 -203904 -1 0 256;
+#X obj 367 326 nbx 2 15 -1e+37 1e+37 0 0 \$0-seqC7-S \$0-seqC7-R empty
+0 -8 0 15 -33289 -203904 -1 3 256;
 #X obj 293 326 nbx 2 15 -1e+37 1e+37 0 0 \$0-seqC5-S \$0-seqC5-R empty
-0 -8 0 15 -33289 -203904 -1 2 256;
+0 -8 0 15 -33289 -203904 -1 5 256;
 #X obj 330 326 nbx 2 15 -1e+37 1e+37 0 0 \$0-seqC6-S \$0-seqC6-R empty
-0 -8 0 15 -33289 -203904 -1 1 256;
+0 -8 0 15 -33289 -203904 -1 0 256;
 #X obj 256 326 nbx 2 15 -1e+37 1e+37 0 0 \$0-seqC4-S \$0-seqC4-R empty
 0 -8 0 15 -16662 -203904 -1 3 256;
 #X obj 107 341 hradio 37 1 0 8 \$0-seqcursor-S \$0-seqcursor-R empty
-0 -8 0 10 -228856 -58253 -1 3;
+0 -8 0 10 -228856 -58253 -1 0;
 #X obj 111 289 tgl 30 0 \$0-seqtoggle-S \$0-seqtoggle-R empty 17 7
 0 10 -86277 -232576 -1 1 1;
 #X obj 819 365 cnv 12 80 12 empty empty configure: 0 5 1 10 -33289
@@ -51,51 +51,51 @@
 -99865 -203904 -1;
 #X obj 213 284 cnv 15 50 30 empty empty pattern 0 5 1 10 -164752 -262144
 0;
-#X obj 220 300 nbx 3 15 -1e+37 1e+37 0 0 \$0-pattern empty empty 0
--8 0 15 -4160 -203904 -1 13 256;
+#X obj 220 300 nbx 3 15 -1e+37 1e+37 0 1 \$0-pattern empty empty 0
+-8 0 15 -4160 -203904 -1 1 256;
 #X obj 787 431 r \$0-configure;
 #X obj 155 284 cnv 15 50 30 empty empty div 0 5 1 10 -164752 -262144
 0;
-#X obj 158 300 nbx 3 15 -1e+37 1e+37 0 0 \$0-div empty empty 0 -8 0
-15 -4160 -203904 -1 5 256;
+#X obj 158 300 nbx 3 15 -1e+37 1e+37 0 1 \$0-div empty empty 0 -8 0
+15 -4160 -203904 -1 8 256;
 #X obj 384 286 cnv 15 30 20 empty \$0-tmodecnv-R bpm 10 10 1 15 -164741
 -262144 0;
-#X obj 272 282 nbx 4 30 -1e+37 1e+37 0 0 \$0-ntempo-S \$0-ntempo-R
-empty 0 -8 0 25 -86277 -260097 -1 92 256;
+#X obj 272 282 nbx 4 30 -1e+37 1e+37 0 1 \$0-ntempo-S \$0-ntempo-R
+empty 0 -8 0 25 -86277 -260097 -1 120 256;
 #X obj 645 338 cnv 15 50 15 empty empty tuned 5 7 1 12 -86027 -232576
 0;
-#X obj 633 356 nbx 3 20 -1e+37 1e+37 0 0 \$0-slicepitch-S \$0-slicepitch-R
+#X obj 633 356 nbx 3 20 -1e+37 1e+37 0 1 \$0-slicepitch-S \$0-slicepitch-R
 empty 0 -8 0 18 -139909 -261234 -1 0 256;
-#X obj 701 280 cnv 15 200 15 empty \$0-presetcanvas piano.nvl 0 7 1
-12 -58569 -262130 0;
-#X obj 357 308 hradio 13 1 0 4 \$0-tmode-S \$0-tmode-R /8 10 -8 0 10
+#X obj 701 280 cnv 15 200 15 empty \$0-presetcanvas espelho.nvl 0 7
+1 12 -58569 -262130 0;
+#X obj 357 308 hradio 13 1 1 4 \$0-tmode-S \$0-tmode-R /8 10 -8 0 10
 -86277 -260097 -262144 2;
 #X obj 799 362 bng 15 250 50 0 \$0-open empty empty 17 7 0 10 -99865
 -203904 -1;
 #X obj 712 363 cnv 12 80 12 empty empty edit_wav-file: 0 7 1 11 -33289
 -262144 0;
-#X obj 94 475 cnv 15 120 50 empty empty empty 0 7 1 12 -33289 -203904
+#X obj 94 570 cnv 15 120 50 empty empty empty 0 7 1 12 -33289 -203904
 0;
-#X obj 112 483 cnv 15 100 20 empty \$0-tstretchcnv SampleScratch 0
+#X obj 112 578 cnv 15 100 20 empty \$0-tstretchcnv SampleScratch 0
 5 1 13 -86277 -262144 0;
-#X obj 182 501 cnv 15 30 20 empty \$0-tstretchunit ms 10 10 1 15 -86277
+#X obj 182 596 cnv 15 30 20 empty \$0-tstretchunit ms 10 10 1 15 -86277
 -262144 0;
-#X obj 112 501 nbx 4 20 -1e+37 1e+37 0 0 \$0-tstrech-S \$0-tstrech-R
+#X obj 112 596 nbx 4 20 -1e+37 1e+37 0 0 \$0-tstrech-S \$0-tstrech-R
 empty 0 -8 0 18 -231946 -262144 -1 0 256;
-#X obj 98 482 vradio 13 1 0 3 \$0-syncscale-S \$0-syncscale-R empty
+#X obj 98 577 vradio 13 1 0 3 \$0-syncscale-S \$0-syncscale-R empty
 0 -8 0 10 -86277 -260097 -1 0;
-#X obj 582 283 cnv 15 50 50 empty \$0-volcnv_L 0.857097 0 42 0 8 -140044
+#X obj 582 283 cnv 15 50 50 empty \$0-volcnv_L 0.642903 0 42 0 8 -140044
 -232576 0;
 #X obj 594 287 cnv 15 30 30 empty empty empty 0 7 1 12 -86277 -203904
 0;
 #X obj 591 286 knob 32 32 0 1 0 0 \$0-vol_L-S \$0-vol_L-R empty 0 -8
-192 8 -114693 -172745 -1 2657 1;
-#X obj 636 283 cnv 15 50 50 empty \$0-volcnv_R 0.857097 0 42 0 8 -140044
+192 8 -114693 -172745 -1 1993 1;
+#X obj 636 283 cnv 15 50 50 empty \$0-volcnv_R 0.642903 0 42 0 8 -140044
 -203904 0;
 #X obj 648 287 cnv 15 30 30 empty empty empty 0 7 1 12 -86277 -203904
 0;
 #X obj 645 286 knob 32 32 0 1 0 0 \$0-vol_R-S \$0-vol_R-R empty 0 -8
-192 8 -114693 -172745 -1 2657 1;
+192 8 -114693 -172745 -1 1993 1;
 #X obj 405 337 hradio 10 1 0 24 \$0-rpitch-S \$0-rpitch-L empty 0 -8
 0 8 -262144 -1 -1 0;
 #X obj 701 298 cnv 15 200 60 empty \$0-presetcnv empty 20 12 0 14 -173779
@@ -112,8 +112,8 @@ empty 0 -8 0 18 -231946 -262144 -1 0 256;
 8 -262144 -1 -1;
 #X obj 854 334 bng 10 250 50 0 \$0-mono2stereo empty mono2x 11 5 0
 8 -262144 -1 -1;
-#X obj 627 283 knob 15 15 0 1 0 0 \$0-vol-S \$0-vol-R empty 0 -8 192
-8 -86853 -86277 -1 1200 1;
+#X obj 627 283 knob 15 15 0 1 0 1 \$0-vol-S \$0-vol-R empty 0 -8 192
+8 -86853 -86277 -1 900 1;
 #X obj 788 477 s pd-\$0-configure_guts;
 #N canvas 340 439 450 300 \$0-configure_guts 0;
 #X obj 6 210 image NAVA100.gif;
@@ -195,17 +195,20 @@ empty 0 -8 0 18 -231946 -262144 -1 0 256;
 #X connect 8 1 4 0;
 #X connect 8 2 6 0;
 #X connect 8 2 3 0;
-#X restore 90 529 pd \$0-timestretch_guts;
-#N canvas 18 109 450 300 \$0-pitch_guts 0;
+#X restore 90 624 pd \$0-timestretch_guts;
+#N canvas 48 249 450 300 \$0-pitch_guts 0;
 #X symbolatom 26 29 10 0 0 0 - #0-defaultpitch -;
 #X obj 27 69 s \$0-defaultpitchlabel;
 #X msg 28 49 label \$1;
 #X msg 95 46 label_font 1 \$1;
 #X floatatom 127 19 5 0 0 0 - - -;
+#X obj 204 99 outlet;
+#X obj 204 69 r \$0-defaultpitchnote;
 #X connect 0 0 2 0;
 #X connect 2 0 1 0;
 #X connect 3 0 1 0;
 #X connect 4 0 3 0;
+#X connect 6 0 5 0;
 #X restore 409 384 pd \$0-pitch_guts;
 #N canvas 470 127 804 612 \$0-sequencer_guts 0;
 #X obj 120 410 int;
@@ -390,6 +393,7 @@ empty 0 -8 0 18 -231946 -262144 -1 0 256;
 #X obj 49 55 f;
 #X obj 111 23 t b;
 #X obj 209 492 s \$0-seq;
+#X obj 8 192 outlet;
 #X connect 0 0 10 0;
 #X connect 0 0 58 0;
 #X connect 1 0 10 1;
@@ -430,6 +434,7 @@ empty 0 -8 0 18 -231946 -262144 -1 0 256;
 #X connect 23 0 26 2;
 #X connect 24 0 26 3;
 #X connect 25 0 29 0;
+#X connect 25 0 59 0;
 #X connect 26 0 43 0;
 #X connect 26 1 42 0;
 #X connect 26 2 41 0;
@@ -462,7 +467,7 @@ empty 0 -8 0 18 -231946 -262144 -1 0 256;
 #X connect 55 0 48 0;
 #X connect 56 0 45 0;
 #X connect 57 0 56 0;
-#X restore 104 384 pd \$0-sequencer_guts;
+#X restore 107 385 pd \$0-sequencer_guts;
 #N canvas 78 389 243 340 \$0-interface 0;
 #X msg 12 19 color -1.03061e+07 -1 -1;
 #X obj 23 43 s \$0-playercnv;
@@ -580,7 +585,7 @@ empty 0 -8 0 18 -231946 -262144 -1 0 256;
 #X obj 156 142 t b;
 #N canvas 105 468 854 116 mouseslices 0;
 #X obj -779 27 hradio 50 1 0 16 \$0-slice \$0-slicerpanel empty 0 -8
-0 10 -54277 -83269 -1 4;
+0 10 -54277 -83269 -1 0;
 #X obj -715 1 cnv 15 30 20 empty empty 1 0 10 1 30 -204786 -13330 0
 ;
 #X obj -667 0 cnv 15 30 20 empty empty 2 0 12 1 30 -204786 -13330 0
@@ -679,7 +684,7 @@ empty 0 -8 0 18 -231946 -262144 -1 0 256;
 #X msg 500 168 0 5 \, 1 5 5;
 #X obj 360 109 t f b;
 #X obj 361 133 pipe 5;
-#N canvas 12 81 800 493 rack_de_efeitos 0;
+#N canvas 30 165 800 493 rack_de_efeitos 0;
 #X obj 86 29 inlet~;
 #X obj 152 31 inlet~;
 #X obj 87 263 outlet~;
@@ -689,7 +694,7 @@ empty 0 -8 0 18 -231946 -262144 -1 0 256;
 #X obj 53 133 fx.pitch.shift~;
 #X obj 240 57 r \$0-pshift;
 #X obj 287 313 fiddle~;
-#N canvas 0 0 664 495 nomesnotas 0;
+#N canvas 12 81 664 495 nomesnotas 0;
 #X obj 80 47 inlet;
 #X obj 79 436 outlet;
 #X obj 58 182 % 12;
@@ -747,6 +752,7 @@ empty 0 -8 0 18 -231946 -262144 -1 0 256;
 #X msg 233 408 label \$1;
 #X obj 296 391 tosymbol;
 #X obj 287 359 sprintf %s-%d;
+#X obj 127 361 s \$0-defaultpitchnote;
 #X connect 0 0 6 0;
 #X connect 1 0 5 0;
 #X connect 5 0 3 0;
@@ -756,6 +762,7 @@ empty 0 -8 0 18 -231946 -262144 -1 0 256;
 #X connect 7 0 5 1;
 #X connect 7 0 6 1;
 #X connect 8 0 9 0;
+#X connect 8 0 14 0;
 #X connect 9 0 13 0;
 #X connect 9 1 13 1;
 #X connect 11 0 10 0;
@@ -933,7 +940,7 @@ empty 0 -8 0 18 -231946 -262144 -1 0 256;
 #X connect 93 0 94 1;
 #X connect 94 0 1 0;
 #X connect 95 0 93 0;
-#X restore 435 485 pd \$0-play_segments;
+#X restore 602 417 pd \$0-play_segments;
 #N canvas 6 53 1268 686 \$0-preset_guts 0;
 #X obj 550 604 s \$0-restore;
 #X obj 888 140 r \$0-debug;
@@ -1131,7 +1138,7 @@ empty 0 -8 0 18 -231946 -262144 -1 0 256;
 #X obj 181 56 tosymbol;
 #X obj 182 18 loadbang;
 #X msg 181 37 enter_text_here------;
-#X obj 33 159 s \$0-presetname_load;
+#X obj 33 210 s \$0-presetname_load;
 #X obj 33 136 openpanel;
 #X obj 841 429 s \$0-presetcnv;
 #X msg 916 402 color -1.11691e+07 -1 -1;
@@ -1237,6 +1244,8 @@ alike;
 #X msg 142 103 \$1 presets;
 #X obj 39 489 mergefilename /;
 #X msg 39 466 \$1 presets;
+#X msg 11 35 symbol presets/espelho.nvl;
+#X obj 77 169 inlet;
 #X connect 1 0 45 0;
 #X connect 3 0 2 0;
 #X connect 6 0 8 0;
@@ -1273,6 +1282,7 @@ alike;
 #X connect 37 0 48 0;
 #X connect 38 0 39 0;
 #X connect 38 0 30 0;
+#X connect 38 0 56 0;
 #X connect 39 0 37 0;
 #X connect 41 0 40 0;
 #X connect 43 0 42 0;
@@ -1287,6 +1297,8 @@ alike;
 #X connect 53 0 52 0;
 #X connect 54 0 32 0;
 #X connect 55 0 54 0;
+#X connect 56 0 40 0;
+#X connect 57 0 40 0;
 #X restore 906 284 pd \$0-preset_guts;
 #X obj 789 500 r \$0-timestretch_btn;
 #X obj 792 573 r \$0-sequencer_btn;
@@ -1294,9 +1306,9 @@ alike;
 #X obj 790 549 s pd-\$0-timestretch_guts;
 #X msg 795 596 vis 1;
 #X obj 793 618 s pd-\$0-sequencer_guts;
-#X obj 429 519 outlet~;
-#X obj 525 523 outlet~;
-#X text 92 456 to do (ainda nao implementado):;
+#X obj 602 451 outlet~;
+#X obj 692 455 outlet~;
+#X text 92 551 to do (ainda nao implementado):;
 #X obj 489 301 bng 15 250 50 0 \$0-random empty random 0 22 0 10 -262144
 -1 -262144;
 #X obj 449 300 bng 15 250 50 0 \$0-> empty > 0 -7 0 15 -262144 -1 -262144
@@ -1305,15 +1317,29 @@ alike;
 ;
 #X obj 546 304 bng 12 250 50 0 \$0-seqzero empty 0 0 -7 0 10 -262144
 -1 -262144;
-#X obj 506 301 nbx 2 15 0 16 0 0 \$0-randomfactor empty empty 0 -8
-0 15 -4160 -203904 -1 4 256;
-#X text 89 550 versao alpha em [Tnvl];
+#X obj 506 301 nbx 2 15 0 16 0 1 \$0-randomfactor empty empty 0 -8
+0 15 -4160 -203904 -1 8 256;
+#X text 89 645 versao alpha em [Tnvl];
+#X obj 29 207 inlet;
+#X obj 28 389 outlet;
+#X obj 107 477 outlet;
+#X obj 912 217 inlet;
+#X obj 909 263 makefilename presets/%s.nvl;
+#X obj 910 243 tosymbol;
+#X obj 409 478 outlet;
+#X connect 20 0 81 0;
 #X connect 25 0 58 0;
 #X connect 58 0 56 0;
+#X connect 60 0 86 0;
+#X connect 61 0 82 0;
 #X connect 63 0 71 0;
 #X connect 63 1 72 0;
 #X connect 65 0 67 0;
 #X connect 66 0 69 0;
 #X connect 67 0 68 0;
 #X connect 69 0 70 0;
+#X connect 80 0 20 0;
+#X connect 83 0 85 0;
+#X connect 84 0 64 0;
+#X connect 85 0 84 0;
 #X coords 0 -1 1 1 805 280 2 100 100;
