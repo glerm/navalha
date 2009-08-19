@@ -1,0 +1,34 @@
+#N canvas 63 369 683 289 24;
+#X obj 2 -66 cnv 15 700 300 empty empty Navalha_settings 20 40 0 35
+-75215 -260097 0;
+#X obj 734 177 color_set;
+#X obj 136 68 entry 540 46 white black;
+#X msg 810 35 fontsize 25;
+#X obj 965 -53 loadbang;
+#X text 390 37 diretorio_de_trabalho:;
+#X obj 965 -12 delay 1000;
+#X symbolatom 724 116 40 0 0 0 - - main_DIR;
+#X obj 710 82 select return;
+#X msg 704 35 clear;
+#X obj 726 35 t b b;
+#X msg 980 36 set digite aqui e aperte enter;
+#N canvas 66 333 450 300 navalha2 0;
+#X restore 874 176 pd navalha2;
+#X msg 1041 179 \; pd-navalha2 vis \$1;
+#X obj 22 35 tgl 100 0 \$0-main \$0-main_ empty 17 7 0 40 -13381 -4034
+-1 1 1;
+#X obj 64 93 image NAVA100.gif;
+#X obj 1007 79 r \$0-main;
+#X connect 2 0 7 0;
+#X connect 2 1 8 0;
+#X connect 3 0 2 0;
+#X connect 4 0 6 0;
+#X connect 6 0 11 0;
+#X connect 6 0 3 0;
+#X connect 8 0 2 0;
+#X connect 8 0 10 0;
+#X connect 9 0 2 0;
+#X connect 10 0 9 0;
+#X connect 10 1 2 0;
+#X connect 11 0 2 0;
+#X connect 16 0 13 0;
