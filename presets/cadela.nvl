@@ -1,5 +1,5 @@
 reset bang;
-filename /home/glerm/samples/cadela.wav;
+filename samples/cadela.wav;
 end 0 0.246558;
 end 1 0.510638;
 end 2 0.762203;

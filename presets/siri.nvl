@@ -1,5 +1,5 @@
 reset bang;
-filename /home/glerm/samples/siri.wav;
+filename samples/siri.wav;
 end 0 0.16771;
 end 1 0.300375;
 end 2 0.39174;

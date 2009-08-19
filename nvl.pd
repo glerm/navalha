@@ -1,22 +1,21 @@
 #N canvas 6 53 1268 686 10;
-#X declare -lib bsaylor;
 #X declare -lib iem_tab;
 #X obj 106 266 hsl 795 12 0 1 0 0 \$0-end \$0-end-r empty -2 -8 0 10
--182874 -1 -1 9900 1;
+-182874 -1 -1 16500 1;
 #X obj 103 116 cnv 15 800 148 empty \$0-cnvtable empty 20 12 0 14 -224813
 -1 0;
-#X obj 104 116 cnv 15 99 148 empty \$0-selectarea 0 0 80 0 141 -195986
+#X obj 246 116 cnv 15 24 148 empty \$0-selectarea 4 0 80 0 141 -195986
 -247041 0;
 #N canvas 0 22 450 300 (subpatch) 0;
-#X array \$0-L 146056 float 2;
-#X coords 0 1 146056 -1 800 75 1;
+#X array \$0-L 138240 float 2;
+#X coords 0 1 138240 -1 800 75 1;
 #X restore 103 115 graph;
 #N canvas 0 22 450 300 (subpatch) 0;
-#X array \$0-R 146056 float 2;
-#X coords 0 1 146056 -1 800 75 1;
+#X array \$0-R 138240 float 2;
+#X coords 0 1 138240 -1 800 75 1;
 #X restore 103 190 graph;
 #X obj 106 103 hsl 795 12 0 1 0 0 \$0-start \$0-start-r empty -2 -8
-0 10 -182874 -1 -1 0 1;
+0 10 -182874 -1 -1 14100 1;
 #X text 431 464 engine segmentos;
 #X obj 104 280 cnv 15 797 97 empty \$0-playercnv empty 20 12 0 14 -160781
 -1 0;
@@ -27,23 +26,23 @@
 #X obj 107 289 cnv 15 500 30 empty empty empty 0 15 1 24 -123792 -262144
 0;
 #X obj 219 326 nbx 2 15 -1e+37 1e+37 0 0 \$0-seqC3-S \$0-seqC3-R empty
-0 -8 0 15 -33289 -203904 -1 0 256;
+0 -8 0 15 -33289 -203904 -1 4 256;
 #X obj 145 325 nbx 2 15 -1e+37 1e+37 0 0 \$0-seqC1-S \$0-seqC1-R empty
-0 -8 0 15 -33289 -203904 -1 0 256;
+0 -8 0 15 -33289 -203904 -1 6 256;
 #X obj 182 326 nbx 2 15 -1e+37 1e+37 0 0 \$0-seqC2-S \$0-seqC2-R empty
-0 -8 0 15 -33289 -203904 -1 0 256;
+0 -8 0 15 -33289 -203904 -1 5 256;
 #X obj 107 325 nbx 2 15 -1e+37 1e+37 0 0 \$0-seqC0-S \$0-seqC0-R empty
-0 -8 0 15 -16662 -203904 -1 0 256;
+0 -8 0 15 -16662 -203904 -1 7 256;
 #X obj 367 326 nbx 2 15 -1e+37 1e+37 0 0 \$0-seqC7-S \$0-seqC7-R empty
 0 -8 0 15 -33289 -203904 -1 0 256;
 #X obj 293 326 nbx 2 15 -1e+37 1e+37 0 0 \$0-seqC5-S \$0-seqC5-R empty
-0 -8 0 15 -33289 -203904 -1 0 256;
+0 -8 0 15 -33289 -203904 -1 2 256;
 #X obj 330 326 nbx 2 15 -1e+37 1e+37 0 0 \$0-seqC6-S \$0-seqC6-R empty
-0 -8 0 15 -33289 -203904 -1 0 256;
+0 -8 0 15 -33289 -203904 -1 1 256;
 #X obj 256 326 nbx 2 15 -1e+37 1e+37 0 0 \$0-seqC4-S \$0-seqC4-R empty
-0 -8 0 15 -16662 -203904 -1 0 256;
+0 -8 0 15 -16662 -203904 -1 3 256;
 #X obj 107 341 hradio 37 1 0 8 \$0-seqcursor-S \$0-seqcursor-R empty
-0 -8 0 10 -228856 -58253 -1 1;
+0 -8 0 10 -228856 -58253 -1 3;
 #X obj 111 289 tgl 30 0 \$0-seqtoggle-S \$0-seqtoggle-R empty 17 7
 0 10 -86277 -232576 -1 1 1;
 #X obj 819 365 cnv 12 80 12 empty empty configure: 0 5 1 10 -33289
@@ -53,24 +52,24 @@
 #X obj 213 284 cnv 15 50 30 empty empty pattern 0 5 1 10 -164752 -262144
 0;
 #X obj 220 300 nbx 3 15 -1e+37 1e+37 0 0 \$0-pattern empty empty 0
--8 0 15 -4160 -203904 -1 0 256;
+-8 0 15 -4160 -203904 -1 13 256;
 #X obj 787 431 r \$0-configure;
 #X obj 155 284 cnv 15 50 30 empty empty div 0 5 1 10 -164752 -262144
 0;
 #X obj 158 300 nbx 3 15 -1e+37 1e+37 0 0 \$0-div empty empty 0 -8 0
-15 -4160 -203904 -1 8 256;
+15 -4160 -203904 -1 5 256;
 #X obj 384 286 cnv 15 30 20 empty \$0-tmodecnv-R bpm 10 10 1 15 -164741
 -262144 0;
 #X obj 272 282 nbx 4 30 -1e+37 1e+37 0 0 \$0-ntempo-S \$0-ntempo-R
-empty 0 -8 0 25 -86277 -260097 -1 0 256;
+empty 0 -8 0 25 -86277 -260097 -1 92 256;
 #X obj 645 338 cnv 15 50 15 empty empty tuned 5 7 1 12 -86027 -232576
 0;
 #X obj 633 356 nbx 3 20 -1e+37 1e+37 0 0 \$0-slicepitch-S \$0-slicepitch-R
 empty 0 -8 0 18 -139909 -261234 -1 0 256;
-#X obj 701 280 cnv 15 200 15 empty \$0-presetcanvas breakcore.nvl 0
-7 1 12 -58569 -262130 0;
+#X obj 701 280 cnv 15 200 15 empty \$0-presetcanvas piano.nvl 0 7 1
+12 -58569 -262130 0;
 #X obj 357 308 hradio 13 1 0 4 \$0-tmode-S \$0-tmode-R /8 10 -8 0 10
--86277 -260097 -262144 0;
+-86277 -260097 -262144 2;
 #X obj 799 362 bng 15 250 50 0 \$0-open empty empty 17 7 0 10 -99865
 -203904 -1;
 #X obj 712 363 cnv 12 80 12 empty empty edit_wav-file: 0 7 1 11 -33289
@@ -85,18 +84,18 @@ empty 0 -8 0 18 -139909 -261234 -1 0 256;
 empty 0 -8 0 18 -231946 -262144 -1 0 256;
 #X obj 98 482 vradio 13 1 0 3 \$0-syncscale-S \$0-syncscale-R empty
 0 -8 0 10 -86277 -260097 -1 0;
-#X obj 582 283 cnv 15 50 50 empty \$0-volcnv_L 0.42871 0 42 0 8 -140044
+#X obj 582 283 cnv 15 50 50 empty \$0-volcnv_L 0.857097 0 42 0 8 -140044
 -232576 0;
 #X obj 594 287 cnv 15 30 30 empty empty empty 0 7 1 12 -86277 -203904
 0;
 #X obj 591 286 knob 32 32 0 1 0 0 \$0-vol_L-S \$0-vol_L-R empty 0 -8
-192 8 -114693 -172745 -1 1329 1;
-#X obj 636 283 cnv 15 50 50 empty \$0-volcnv_R 0.42871 0 42 0 8 -140044
+192 8 -114693 -172745 -1 2657 1;
+#X obj 636 283 cnv 15 50 50 empty \$0-volcnv_R 0.857097 0 42 0 8 -140044
 -203904 0;
 #X obj 648 287 cnv 15 30 30 empty empty empty 0 7 1 12 -86277 -203904
 0;
 #X obj 645 286 knob 32 32 0 1 0 0 \$0-vol_R-S \$0-vol_R-R empty 0 -8
-192 8 -114693 -172745 -1 1329 1;
+192 8 -114693 -172745 -1 2657 1;
 #X obj 405 337 hradio 10 1 0 24 \$0-rpitch-S \$0-rpitch-L empty 0 -8
 0 8 -262144 -1 -1 0;
 #X obj 701 298 cnv 15 200 60 empty \$0-presetcnv empty 20 12 0 14 -173779
@@ -114,9 +113,9 @@ empty 0 -8 0 18 -231946 -262144 -1 0 256;
 #X obj 854 334 bng 10 250 50 0 \$0-mono2stereo empty mono2x 11 5 0
 8 -262144 -1 -1;
 #X obj 627 283 knob 15 15 0 1 0 0 \$0-vol-S \$0-vol-R empty 0 -8 192
-8 -86853 -86277 -1 600 1;
+8 -86853 -86277 -1 1200 1;
 #X obj 788 477 s pd-\$0-configure_guts;
-#N canvas 328 439 450 300 \$0-configure_guts 0;
+#N canvas 340 439 450 300 \$0-configure_guts 0;
 #X obj 6 210 image NAVA100.gif;
 #X obj 11 18 tgl 40 1 \$0-ligasom aaaaaaaaaa DSP 0 -7 0 10 -99865 -262144
 -4160 1 1;
@@ -131,9 +130,50 @@ empty 0 -8 0 18 -231946 -262144 -1 0 256;
 17 7 0 10 -262144 -1 -1;
 #X obj 168 42 bng 15 250 50 0 \$0-sequencer_btn empty sequencer 17
 7 0 10 -262144 -1 -1;
+#X obj 172 92 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#N canvas 6 53 558 488 \$0-tuning 0;
+#X obj 38 122 sel 122 120 99 118 98 110 109 44 46 29;
+#X msg 132 156 0;
+#X msg 158 152 1;
+#X msg 187 153 2;
+#X msg 215 154 3;
+#X msg 100 155 -1;
+#X msg 72 154 -2;
+#X msg 43 153 -3;
+#X msg 16 152 -4;
+#X msg 244 155 4;
+#X obj 38 10 key;
+#X obj 114 206 s \$0-pshift;
+#X obj 38 75 spigot;
+#X obj 83 33 inlet;
+#X text 120 101 zxcvb;
+#X connect 0 0 8 0;
+#X connect 0 2 7 0;
+#X connect 0 3 6 0;
+#X connect 0 4 5 0;
+#X connect 0 5 1 0;
+#X connect 0 6 2 0;
+#X connect 0 7 3 0;
+#X connect 0 8 4 0;
+#X connect 0 9 9 0;
+#X connect 1 0 11 0;
+#X connect 2 0 11 0;
+#X connect 3 0 11 0;
+#X connect 4 0 11 0;
+#X connect 5 0 11 0;
+#X connect 6 0 11 0;
+#X connect 7 0 11 0;
+#X connect 8 0 11 0;
+#X connect 9 0 11 0;
+#X connect 10 0 12 0;
+#X connect 12 0 0 0;
+#X connect 13 0 12 1;
+#X restore 172 109 pd \$0-tuning;
+#X connect 8 0 9 0;
 #X restore 857 383 pd \$0-configure_guts;
 #X msg 788 454 vis 1;
-#N canvas 90 439 696 300 \$0-timestretch_guts 0;
+#N canvas 102 439 696 300 \$0-timestretch_guts 0;
 #X obj 68 17 r \$0-syncscale-S;
 #X obj 42 149 s \$0-tstretchcnv;
 #X obj 147 149 s \$0-tstretchunit;
@@ -143,9 +183,6 @@ empty 0 -8 0 18 -231946 -262144 -1 0 256;
 #X msg 17 97 label TimeStretch;
 #X msg 20 121 label SampleScratch;
 #X obj 71 38 sel 0 1 2;
-#X obj 385 113 import bsaylor;
-#X text 362 69 usar:;
-#X obj 354 90 pvoc~ \$0-sss 2048 4;
 #X connect 0 0 8 0;
 #X connect 3 0 2 0;
 #X connect 4 0 2 0;
@@ -426,7 +463,7 @@ empty 0 -8 0 18 -231946 -262144 -1 0 256;
 #X connect 56 0 45 0;
 #X connect 57 0 56 0;
 #X restore 104 384 pd \$0-sequencer_guts;
-#N canvas 66 333 243 340 \$0-interface 0;
+#N canvas 78 389 243 340 \$0-interface 0;
 #X msg 12 19 color -1.03061e+07 -1 -1;
 #X obj 23 43 s \$0-playercnv;
 #N canvas 6 53 558 488 tuning 0;
@@ -543,7 +580,7 @@ empty 0 -8 0 18 -231946 -262144 -1 0 256;
 #X obj 156 142 t b;
 #N canvas 105 468 854 116 mouseslices 0;
 #X obj -779 27 hradio 50 1 0 16 \$0-slice \$0-slicerpanel empty 0 -8
-0 10 -54277 -83269 -1 0;
+0 10 -54277 -83269 -1 4;
 #X obj -715 1 cnv 15 30 20 empty empty 1 0 10 1 30 -204786 -13330 0
 ;
 #X obj -667 0 cnv 15 30 20 empty empty 2 0 12 1 30 -204786 -13330 0
@@ -1269,7 +1306,8 @@ alike;
 #X obj 546 304 bng 12 250 50 0 \$0-seqzero empty 0 0 -7 0 10 -262144
 -1 -262144;
 #X obj 506 301 nbx 2 15 0 16 0 0 \$0-randomfactor empty empty 0 -8
-0 15 -4160 -203904 -1 0 256;
+0 15 -4160 -203904 -1 4 256;
+#X text 89 550 versao alpha em [Tnvl];
 #X connect 25 0 58 0;
 #X connect 58 0 56 0;
 #X connect 63 0 71 0;
