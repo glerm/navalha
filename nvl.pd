@@ -1,25 +1,25 @@
-#N canvas 6 53 1268 686 10;
+#N canvas 0 25 1268 658 10;
 #X declare -lib iem_tab;
 #X obj 106 266 hsl 795 12 0 1 0 0 \$0-end \$0-end-r empty -2 -8 0 10
--182874 -1 -1 29514 1;
+-182874 -1 -1 79400 1;
 #X obj 103 116 cnv 15 800 148 empty \$0-cnvtable empty 20 12 0 14 -224813
 -1 0;
-#X obj 245 116 cnv 15 156 148 empty \$0-selectarea 1 0 80 0 141 -195986
+#X obj 413 116 cnv 15 490 148 empty \$0-selectarea 7 0 80 0 141 -195986
 -247041 0;
 #N canvas 0 22 450 300 (subpatch) 0;
-#X array \$0-L 81955 float 2;
-#X coords 0 1 81955 -1 800 75 1;
+#X array \$0-L 138240 float 2;
+#X coords 0 1 138240 -1 800 75 1;
 #X restore 103 115 graph;
 #N canvas 0 22 450 300 (subpatch) 0;
-#X array \$0-R 81955 float 2;
-#X coords 0 1 81955 -1 800 75 1;
+#X array \$0-R 138240 float 2;
+#X coords 0 1 138240 -1 800 75 1;
 #X restore 103 190 graph;
 #X obj 106 103 hsl 795 12 0 1 0 0 \$0-start \$0-start-r empty -2 -8
-0 10 -182874 -1 -1 14012 1;
+0 10 -182874 -1 -1 30700 1;
 #X text 601 456 engine segmentos;
 #X obj 104 280 cnv 15 797 97 empty \$0-playercnv empty 20 12 0 14 -160781
 -1 0;
-#X obj 405 347 cnv 15 300 30 empty \$0-defaultpitchlabel Fa_sustenido-4
+#X obj 405 347 cnv 15 300 30 empty \$0-defaultpitchlabel Do_sustenido-5
 0 15 1 24 -66057 -262144 0;
 #X obj 689 306 cnv 15 200 70 empty empty empty 0 7 1 12 -33289 -203904
 0;
@@ -42,7 +42,7 @@
 #X obj 256 326 nbx 2 15 -1e+37 1e+37 0 0 \$0-seqC4-S \$0-seqC4-R empty
 0 -8 0 15 -16662 -203904 -1 1 256;
 #X obj 107 341 hradio 37 1 0 8 \$0-seqcursor-S \$0-seqcursor-R empty
-0 -8 0 10 -228856 -58253 -1 6;
+0 -8 0 10 -228856 -58253 -1 2;
 #X obj 107 289 tgl 30 0 \$0-seqtoggle-S \$0-seqtoggle-R empty 17 7
 0 10 -86277 -232576 -1 0 1;
 #X obj 819 365 cnv 12 80 12 empty empty configure: 0 5 1 10 -33289
@@ -58,16 +58,16 @@
 0;
 #X obj 158 300 nbx 3 15 -1e+37 1e+37 0 1 \$0-div empty empty 0 -8 0
 15 -4160 -203904 -1 8 256;
-#X obj 384 286 cnv 15 30 20 empty \$0-tmodecnv-R bpm 10 10 1 15 -164741
+#X obj 384 288 cnv 15 30 20 empty \$0-tmodecnv-R bpm 10 10 1 15 -164741
 -262144 0;
 #X obj 272 282 nbx 4 30 -1e+37 1e+37 0 1 \$0-ntempo-S \$0-ntempo-R
 empty 0 -8 0 25 -86277 -260097 -1 120 256;
 #X obj 645 338 cnv 15 50 15 empty empty tuned 5 7 1 12 -86027 -232576
 0;
 #X obj 633 356 nbx 3 20 -1e+37 1e+37 0 1 \$0-slicepitch-S \$0-slicepitch-R
-empty 0 -8 0 18 -139909 -261234 -1 0 256;
-#X obj 701 280 cnv 15 200 15 empty \$0-presetcanvas espelho.nvl 0 7
-1 12 -58569 -262130 0;
+empty 0 -8 0 18 -139909 -261234 -1 1 256;
+#X obj 701 280 cnv 15 200 15 empty \$0-presetcanvas piano.nvl 0 7 1
+12 -58569 -262130 0;
 #X obj 357 308 hradio 13 1 1 4 \$0-tmode-S \$0-tmode-R /8 10 -8 0 10
 -86277 -260097 -262144 2;
 #X obj 799 362 bng 15 250 50 0 \$0-open empty empty 17 7 0 10 -99865
@@ -87,7 +87,7 @@ empty 0 -8 0 18 -139909 -261234 -1 0 256;
 #X obj 645 286 knob 32 32 0 1 0 0 \$0-vol_R-S \$0-vol_R-R empty 0 -8
 192 8 -114693 -172745 -1 1993 1;
 #X obj 405 337 hradio 10 1 0 24 \$0-pitchdisplay-S \$0-pitchdisplay-R
-empty 0 -8 0 8 -262144 -1 -1 12;
+empty 0 -8 0 8 -262144 -1 -1 13;
 #X obj 701 298 cnv 15 200 60 empty \$0-presetcnv empty 20 12 0 14 -173779
 -1 0;
 #X symbolatom 703 314 30 0 0 0 - #0-presetname_save-R #0-presetname_save-S
@@ -105,7 +105,7 @@ empty 0 -8 0 8 -262144 -1 -1 12;
 #X obj 627 283 knob 15 15 0 1 0 1 \$0-vol-S \$0-vol-R empty 0 -8 192
 8 -86853 -86277 -1 900 1;
 #X obj 788 477 s pd-\$0-configure_guts;
-#N canvas 346 439 450 300 \$0-configure_guts 0;
+#N canvas 346 383 450 300 \$0-configure_guts 0;
 #X obj 6 210 image NAVA100.gif;
 #X obj 11 18 tgl 40 1 \$0-ligasom aaaaaaaaaa DSP 0 -7 0 10 -99865 -262144
 -4160 1 1;
@@ -118,34 +118,37 @@ empty 0 -8 0 8 -262144 -1 -1 12;
 7 0 10 -262144 -1 -1;
 #X obj 168 42 bng 15 250 50 0 \$0-sequencer_btn empty sequencer 17
 7 0 10 -262144 -1 -1;
-#X obj 172 92 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 172 92 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #N canvas 6 53 558 488 \$0-tuning 0;
 #X obj 38 122 sel 122 120 99 118 98 110 109 44 46 29;
-#X msg 132 156 0;
-#X msg 158 152 1;
-#X msg 187 153 2;
-#X msg 215 154 3;
-#X msg 100 155 -1;
-#X msg 72 154 -2;
-#X msg 43 153 -3;
-#X msg 16 152 -4;
-#X msg 244 155 4;
+#X msg 163 208 0;
+#X msg 189 204 1;
+#X msg 218 205 2;
+#X msg 246 206 3;
+#X msg 131 207 -1;
+#X msg 94 209 -2;
+#X msg 63 207 -3;
+#X msg 25 206 -4;
+#X msg 275 207 4;
 #X obj 38 10 key;
 #X obj 38 75 spigot;
 #X obj 83 33 inlet;
 #X text 120 101 zxcvb;
-#X obj 112 236 s \$0-pitchdisplay-R;
-#X obj 112 206 + 12;
+#X obj 143 288 s \$0-pitchdisplay-R;
+#X obj 143 258 + 12;
+#X floatatom 143 52 5 0 0 0 - - -;
+#X msg 304 208 5;
 #X connect 0 0 8 0;
-#X connect 0 2 7 0;
-#X connect 0 3 6 0;
-#X connect 0 4 5 0;
-#X connect 0 5 1 0;
-#X connect 0 6 2 0;
-#X connect 0 7 3 0;
-#X connect 0 8 4 0;
-#X connect 0 9 9 0;
+#X connect 0 1 7 0;
+#X connect 0 2 6 0;
+#X connect 0 3 5 0;
+#X connect 0 4 1 0;
+#X connect 0 5 2 0;
+#X connect 0 6 3 0;
+#X connect 0 7 4 0;
+#X connect 0 8 9 0;
+#X connect 0 9 17 0;
 #X connect 1 0 15 0;
 #X connect 2 0 15 0;
 #X connect 3 0 15 0;
@@ -156,9 +159,11 @@ empty 0 -8 0 8 -262144 -1 -1 12;
 #X connect 8 0 15 0;
 #X connect 9 0 15 0;
 #X connect 10 0 11 0;
+#X connect 10 0 16 0;
 #X connect 11 0 0 0;
 #X connect 12 0 11 1;
 #X connect 15 0 14 0;
+#X connect 17 0 15 0;
 #X restore 172 109 pd \$0-tuning;
 #X connect 7 0 8 0;
 #X restore 857 383 pd \$0-configure_guts;
@@ -359,7 +364,6 @@ empty 0 -8 0 8 -262144 -1 -1 12;
 #X obj 209 492 s \$0-seq;
 #X obj 8 192 outlet;
 #X msg 184 186 reset;
-#X obj 183 166 sel 0;
 #X obj 625 315 r \$0-seqC7-S;
 #X obj 617 294 r \$0-seqC6-S;
 #X obj 606 275 r \$0-seqC5-S;
@@ -371,6 +375,8 @@ empty 0 -8 0 8 -262144 -1 -1 12;
 #X obj 506 334 pack f f f f f f f f;
 #X obj 505 377 s \$0-savepattern;
 #X obj 504 355 prepend pattern;
+#X obj 219 166 r \$0-bpmsync;
+#X obj 183 166 sel 1;
 #X connect 0 0 55 0;
 #X connect 1 0 55 0;
 #X connect 2 0 55 0;
@@ -416,7 +422,7 @@ empty 0 -8 0 8 -262144 -1 -1 12;
 #X connect 29 0 27 0;
 #X connect 30 0 23 4;
 #X connect 33 0 22 0;
-#X connect 33 0 58 0;
+#X connect 33 0 70 0;
 #X connect 41 0 44 0;
 #X connect 41 0 48 0;
 #X connect 41 0 54 0;
@@ -436,17 +442,18 @@ empty 0 -8 0 8 -262144 -1 -1 12;
 #X connect 53 0 42 0;
 #X connect 54 0 53 0;
 #X connect 57 0 26 0;
-#X connect 58 0 57 0;
-#X connect 59 0 67 7;
-#X connect 60 0 67 6;
-#X connect 61 0 67 5;
-#X connect 62 0 67 0;
-#X connect 63 0 67 1;
-#X connect 64 0 67 2;
-#X connect 65 0 67 3;
-#X connect 66 0 67 4;
-#X connect 67 0 69 0;
-#X connect 69 0 68 0;
+#X connect 58 0 66 7;
+#X connect 59 0 66 6;
+#X connect 60 0 66 5;
+#X connect 61 0 66 0;
+#X connect 62 0 66 1;
+#X connect 63 0 66 2;
+#X connect 64 0 66 3;
+#X connect 65 0 66 4;
+#X connect 66 0 68 0;
+#X connect 68 0 67 0;
+#X connect 69 0 57 0;
+#X connect 70 0 57 0;
 #X restore 240 424 pd \$0-sequencer_guts;
 #N canvas 78 389 243 340 \$0-interface 0;
 #X msg 12 19 color -1.03061e+07 -1 -1;
@@ -565,7 +572,7 @@ empty 0 -8 0 8 -262144 -1 -1 12;
 #X obj 156 142 t b;
 #N canvas 105 468 854 116 mouseslices 0;
 #X obj -779 27 hradio 50 1 0 16 \$0-slice \$0-slicerpanel empty 0 -8
-0 10 -54277 -83269 -1 1;
+0 10 -54277 -83269 -1 7;
 #X obj -715 1 cnv 15 30 20 empty empty 1 0 10 1 30 -204786 -13330 0
 ;
 #X obj -667 0 cnv 15 30 20 empty empty 2 0 12 1 30 -204786 -13330 0
@@ -621,7 +628,7 @@ empty 0 -8 0 8 -262144 -1 -1 12;
 #X connect 7 0 8 0;
 #X connect 8 0 5 0;
 #X restore 3 279 pd \$0-interface;
-#N canvas 6 53 1268 686 \$0-play_segments 0;
+#N canvas 0 25 1268 658 \$0-play_segments 0;
 #X obj 627 391 soundfiler;
 #X obj 136 48 openpanel;
 #X obj 627 344 pack s \$0;
@@ -669,8 +676,6 @@ empty 0 -8 0 8 -262144 -1 -1 12;
 #X obj 152 31 inlet~;
 #X obj 87 263 outlet~;
 #X obj 138 263 outlet~;
-#X obj 151 163 fx.pitch.shift~;
-#X obj 53 133 fx.pitch.shift~;
 #X obj 395 95 r \$0-pshift;
 #X obj 287 313 fiddle~;
 #N canvas 12 81 664 495 nomesnotas 0;
@@ -735,23 +740,195 @@ empty 0 -8 0 8 -262144 -1 -1 12;
 #X obj 272 93 r \$0-pitchdisplay-S;
 #X obj 395 124 s \$0-pitchdisplay-R;
 #X obj 271 114 - 12;
-#X connect 0 0 5 0;
-#X connect 1 0 4 0;
-#X connect 4 0 3 0;
-#X connect 4 0 7 0;
-#X connect 5 0 2 0;
-#X connect 5 0 7 0;
-#X connect 6 0 15 0;
-#X connect 7 0 8 0;
-#X connect 7 0 13 0;
-#X connect 8 0 12 0;
-#X connect 8 1 12 1;
+#N canvas 417 25 721 670 pitchshift~ 0;
+#X obj 39 564 hip~ 5;
+#X obj 104 430 *~;
+#X obj 212 361 line~;
+#X obj 212 335 pack 0 200;
+#X obj 39 214 exp;
+#X floatatom 39 240 0 0 0 0 - - -;
+#X obj 39 330 /;
+#X obj 166 260 * 0.001;
+#X obj 39 481 cos~;
+#X obj 39 508 *~;
+#X obj 39 537 +~;
+#X obj 126 388 wrap~;
+#X obj 271 431 *~;
+#X obj 208 491 cos~;
+#X obj 208 518 *~;
+#X obj 166 287 t b f;
+#X floatatom 39 356 0 0 0 0 - - -;
+#X obj 39 383 phasor~ 0;
+#X obj 126 361 +~ 0.5;
+#X obj 39 429 -~ 0.5;
+#X obj 39 455 *~ 0.5;
+#X obj 208 430 -~ 0.5;
+#X obj 208 463 *~ 0.5;
+#X obj 39 267 - 1;
+#X obj 39 188 * 0.05776;
+#X obj 39 293 * -1;
+#X text 88 133 <-- transposition;
+#X text 126 148 (halpn_lftones);
+#X text 106 248 speed;
+#X text 105 262 change;
+#X text 74 323 tape head;
+#X text 75 336 rotation speed;
+#X obj -159 130 inlet~;
+#X obj 38 617 outlet~;
+#X obj 39 132 inlet;
+#X text -65 62 ARGUMENT 1 : max window and delay time in msec;
+#X obj 277 157 loadbang;
+#X text -63 27 PITCH SHIFTER (RIPPED FROM THE PD HELP FILES) see 3.audio.examples/G09.pitchshift.pd
+;
+#X obj 281 186 f 10;
+#X obj 281 214 clip 1 1e+07;
+#X obj -159 162 delwrite~ \$0-delayL 10;
+#X obj 104 483 vd~ \$0-delayL;
+#X obj 270 493 vd~ \$0-delayL;
+#X connect 0 0 33 0;
+#X connect 1 0 41 0;
+#X connect 2 0 1 1;
+#X connect 2 0 12 1;
+#X connect 3 0 2 0;
+#X connect 4 0 5 0;
+#X connect 5 0 23 0;
+#X connect 6 0 16 0;
+#X connect 7 0 15 0;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 10 0 0 0;
+#X connect 11 0 12 0;
+#X connect 11 0 21 0;
+#X connect 12 0 42 0;
+#X connect 13 0 14 0;
+#X connect 14 0 10 1;
+#X connect 15 0 6 0;
+#X connect 15 1 6 1;
+#X connect 16 0 17 0;
+#X connect 17 0 1 0;
+#X connect 17 0 19 0;
+#X connect 17 0 18 0;
+#X connect 18 0 11 0;
+#X connect 19 0 20 0;
+#X connect 20 0 8 0;
+#X connect 21 0 22 0;
+#X connect 22 0 13 0;
+#X connect 23 0 25 0;
+#X connect 24 0 4 0;
+#X connect 25 0 6 0;
+#X connect 32 0 40 0;
+#X connect 34 0 24 0;
+#X connect 36 0 38 0;
+#X connect 38 0 39 0;
+#X connect 39 0 3 0;
+#X connect 39 0 7 0;
+#X connect 41 0 9 1;
+#X connect 42 0 14 1;
+#X restore 86 164 pd pitchshift~;
+#N canvas 145 43 698 499 pitchshift~ 0;
+#X obj 39 564 hip~ 5;
+#X obj 104 430 *~;
+#X obj 212 361 line~;
+#X obj 212 335 pack 0 200;
+#X obj 39 214 exp;
+#X floatatom 39 240 0 0 0 0 - - -;
+#X obj 39 330 /;
+#X obj 166 260 * 0.001;
+#X obj 39 481 cos~;
+#X obj 39 508 *~;
+#X obj 39 537 +~;
+#X obj 126 388 wrap~;
+#X obj 271 431 *~;
+#X obj 208 491 cos~;
+#X obj 208 518 *~;
+#X obj 166 287 t b f;
+#X floatatom 39 356 0 0 0 0 - - -;
+#X obj 39 383 phasor~ 0;
+#X obj 126 361 +~ 0.5;
+#X obj 39 429 -~ 0.5;
+#X obj 39 455 *~ 0.5;
+#X obj 208 430 -~ 0.5;
+#X obj 208 463 *~ 0.5;
+#X obj 39 267 - 1;
+#X obj 39 188 * 0.05776;
+#X obj 39 293 * -1;
+#X text 88 133 <-- transposition;
+#X text 126 148 (halpn_lftones);
+#X text 106 248 speed;
+#X text 105 262 change;
+#X text 74 323 tape head;
+#X text 75 336 rotation speed;
+#X obj -159 130 inlet~;
+#X obj 38 617 outlet~;
+#X obj 39 132 inlet;
+#X text -65 62 ARGUMENT 1 : max window and delay time in msec;
+#X obj 277 157 loadbang;
+#X text -63 27 PITCH SHIFTER (RIPPED FROM THE PD HELP FILES) see 3.audio.examples/G09.pitchshift.pd
+;
+#X obj 281 186 f 10;
+#X obj 281 214 clip 1 1e+07;
+#X obj -159 162 delwrite~ \$0-delayR 10;
+#X obj 270 493 vd~ \$0-delayR;
+#X obj 104 482 vd~ \$0-delayR;
+#X connect 0 0 33 0;
+#X connect 1 0 42 0;
+#X connect 2 0 1 1;
+#X connect 2 0 12 1;
+#X connect 3 0 2 0;
+#X connect 4 0 5 0;
+#X connect 5 0 23 0;
+#X connect 6 0 16 0;
+#X connect 7 0 15 0;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 10 0 0 0;
+#X connect 11 0 12 0;
+#X connect 11 0 21 0;
+#X connect 12 0 41 0;
+#X connect 13 0 14 0;
+#X connect 14 0 10 1;
+#X connect 15 0 6 0;
+#X connect 15 1 6 1;
+#X connect 16 0 17 0;
+#X connect 17 0 1 0;
+#X connect 17 0 19 0;
+#X connect 17 0 18 0;
+#X connect 18 0 11 0;
+#X connect 19 0 20 0;
+#X connect 20 0 8 0;
+#X connect 21 0 22 0;
+#X connect 22 0 13 0;
+#X connect 23 0 25 0;
+#X connect 24 0 4 0;
+#X connect 25 0 6 0;
+#X connect 32 0 40 0;
+#X connect 34 0 24 0;
+#X connect 36 0 38 0;
+#X connect 38 0 39 0;
+#X connect 39 0 3 0;
+#X connect 39 0 7 0;
+#X connect 41 0 14 1;
+#X connect 42 0 9 1;
+#X restore 177 164 pd pitchshift~;
+#X obj 273 289 +~;
+#X connect 0 0 15 0;
+#X connect 1 0 16 0;
+#X connect 4 0 13 0;
+#X connect 5 0 6 0;
+#X connect 5 0 11 0;
+#X connect 6 0 10 0;
+#X connect 6 1 10 1;
+#X connect 8 0 7 0;
+#X connect 9 0 8 0;
 #X connect 10 0 9 0;
-#X connect 11 0 10 0;
-#X connect 12 0 11 0;
-#X connect 14 0 16 0;
-#X connect 16 0 4 1;
-#X connect 16 0 5 1;
+#X connect 12 0 14 0;
+#X connect 14 0 16 1;
+#X connect 14 0 15 1;
+#X connect 15 0 2 0;
+#X connect 15 0 17 0;
+#X connect 16 0 3 0;
+#X connect 16 0 17 1;
+#X connect 17 0 5 0;
 #X restore 362 316 pd rack_de_efeitos;
 #X text 153 -150 abre wav;
 #X text 609 269 recebe caminho arq. wav;
@@ -1065,11 +1242,11 @@ empty 0 -8 0 8 -262144 -1 -1 12;
 #X text -4 -112 data formatting and persistence based in;
 #X obj 651 316 r \$0-slicepitch-S;
 #X obj 651 342 prepend pitch;
-#X obj 637 366 f;
 #X text 631 290 TO DO: salvar pitchs no .nvl;
 #X obj 633 412 r \$0-savepattern;
 #X text 626 391 TO DO: salvar patterns no .nvl;
 #X obj 612 440 list;
+#X obj 629 366 list;
 #X connect 0 0 19 0;
 #X connect 1 0 17 0;
 #X connect 4 0 5 0;
@@ -1108,8 +1285,8 @@ empty 0 -8 0 8 -262144 -1 -1 12;
 #X connect 32 1 16 0;
 #X connect 32 2 0 0;
 #X connect 40 0 41 0;
-#X connect 41 0 42 1;
-#X connect 44 0 46 1;
+#X connect 41 0 46 1;
+#X connect 43 0 45 1;
 #X restore 660 182 pd datasaving;
 #X obj 446 599 s \$0-filename;
 #X obj 128 644 s \$0-savetomsg;
@@ -1302,16 +1479,16 @@ alike;
 #X obj 793 618 s pd-\$0-sequencer_guts;
 #X obj 605 511 outlet~;
 #X obj 710 507 outlet~;
-#X obj 489 301 bng 15 250 50 0 \$0-random empty random 0 22 0 10 -262144
+#X obj 498 301 bng 15 250 50 0 \$0-random empty random 0 22 0 10 -262144
 -1 -262144;
-#X obj 449 300 bng 15 250 50 0 \$0-> empty > 0 -7 0 15 -262144 -1 -262144
+#X obj 458 300 bng 15 250 50 0 \$0-> empty > 0 -7 0 15 -262144 -1 -262144
 ;
-#X obj 467 300 bng 15 250 50 0 \$0-< empty < 0 -7 0 15 -262144 -1 -262144
+#X obj 476 300 bng 15 250 50 0 \$0-< empty < 0 -7 0 15 -262144 -1 -262144
 ;
-#X obj 546 304 bng 12 250 50 0 \$0-seqzero empty 0 0 -7 0 10 -262144
+#X obj 555 304 bng 12 250 50 0 \$0-seqzero empty 0 0 -7 0 10 -262144
 -1 -262144;
-#X obj 506 301 nbx 2 15 0 16 0 1 \$0-randomfactor empty empty 0 -8
-0 15 -4160 -203904 -1 8 256;
+#X obj 515 301 nbx 2 15 0 16 0 1 \$0-randomfactor empty empty 0 -8
+0 15 -4160 -203904 -1 6 256;
 #X obj 142 27 inlet;
 #X obj 92 463 outlet;
 #X obj 912 217 inlet;
@@ -1324,7 +1501,10 @@ alike;
 #X obj 602 386 - 12;
 #X obj 405 327 bng 10 250 50 1 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X msg 422 320 12;
+#X msg 601 408 12;
+#X obj 413 310 bng 10 250 50 0 \$0-bpmsync empty sync 11 7 0 8 -86277
+-1 -262144;
+#X obj 13 397 r \$0-bpmsync;
 #X connect 20 0 79 0;
 #X connect 25 0 53 0;
 #X connect 29 0 79 1;
@@ -1350,4 +1530,5 @@ alike;
 #X connect 81 0 31 0;
 #X connect 82 0 83 0;
 #X connect 83 0 42 0;
+#X connect 85 0 79 0;
 #X coords 0 -1 1 1 805 280 2 100 100;
