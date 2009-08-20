@@ -1,4 +1,4 @@
-#N canvas 18 53 1255 686 10;
+#N canvas 19 53 1255 686 10;
 #X declare -lib iem_tab;
 #X declare -lib iem_tab;
 #X obj 42 15 nvl;
@@ -14,10 +14,10 @@
 -1 -1;
 #X obj 639 616 s~ n1;
 #X obj 841 618 s~ n2;
-#X msg 880 336 piano;
-#X msg 881 357 breakcore;
-#X msg 881 379 metadata;
-#X obj 893 314 loadbang;
+#X msg 914 377 piano;
+#X msg 915 398 breakcore;
+#X msg 915 422 metadata;
+#X obj 914 354 loadbang;
 #X obj 1087 286 vsl 15 128 0 1 0 1 empty empty empty 0 -9 0 10 -260097
 -1 -1 8890 1;
 #X obj 1072 423 *~;
