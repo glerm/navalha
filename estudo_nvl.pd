@@ -1,48 +1,48 @@
 #N canvas 6 53 1268 686 10;
 #X declare -lib iem_tab;
 #X obj 106 266 hsl 795 12 0 1 0 0 \$0-end \$0-end-r empty -2 -8 0 10
--182874 -1 -1 0 1;
+-182874 -1 -1 8300 1;
 #X obj 103 116 cnv 15 800 148 empty \$0-cnvtable empty 20 12 0 14 -224813
 -1 0;
-#X obj 104 116 cnv 15 1 148 empty \$0-selectarea 9 0 80 0 141 -195986
+#X obj 147 116 cnv 15 40 148 empty \$0-selectarea 1 0 80 0 141 -195986
 -247041 0;
 #N canvas 0 22 450 300 (subpatch) 0;
-#X array \$0-L 81955 float 2;
-#X coords 0 1 81955 -1 800 75 1;
+#X array \$0-L 138240 float 2;
+#X coords 0 1 138240 -1 800 75 1;
 #X restore 103 115 graph;
 #N canvas 0 22 450 300 (subpatch) 0;
-#X array \$0-R 81955 float 2;
-#X coords 0 1 81955 -1 800 75 1;
+#X array \$0-R 138240 float 2;
+#X coords 0 1 138240 -1 800 75 1;
 #X restore 103 190 graph;
 #X obj 106 103 hsl 795 12 0 1 0 0 \$0-start \$0-start-r empty -2 -8
-0 10 -182874 -1 -1 0 1;
+0 10 -182874 -1 -1 4300 1;
 #X text 601 456 engine segmentos;
 #X obj 104 280 cnv 15 797 97 empty \$0-playercnv empty 20 12 0 14 -160781
 -1 0;
-#X obj 405 347 cnv 15 300 30 empty \$0-defaultpitchlabel Re_sustenido-4
-0 15 1 24 -66057 -262144 0;
+#X obj 405 347 cnv 15 300 30 empty \$0-defaultpitchlabel Do-5 0 15
+1 24 -66057 -262144 0;
 #X obj 689 306 cnv 15 200 70 empty empty empty 0 7 1 12 -33289 -203904
 0;
 #X obj 107 289 cnv 15 500 30 empty empty empty 0 15 1 24 -123792 -262144
 0;
 #X obj 219 326 nbx 2 15 -1e+37 1e+37 0 0 \$0-seqC3-S \$0-seqC3-R empty
-0 -8 0 15 -33289 -203904 -1 0 256;
-#X obj 145 325 nbx 2 15 -1e+37 1e+37 0 0 \$0-seqC1-S \$0-seqC1-R empty
-0 -8 0 15 -33289 -203904 -1 7 256;
-#X obj 182 326 nbx 2 15 -1e+37 1e+37 0 0 \$0-seqC2-S \$0-seqC2-R empty
 0 -8 0 15 -33289 -203904 -1 6 256;
+#X obj 145 325 nbx 2 15 -1e+37 1e+37 0 0 \$0-seqC1-S \$0-seqC1-R empty
+0 -8 0 15 -33289 -203904 -1 6 256;
+#X obj 182 326 nbx 2 15 -1e+37 1e+37 0 0 \$0-seqC2-S \$0-seqC2-R empty
+0 -8 0 15 -33289 -203904 -1 5 256;
 #X obj 107 325 nbx 2 15 -1e+37 1e+37 0 0 \$0-seqC0-S \$0-seqC0-R empty
-0 -8 0 15 -16662 -203904 -1 0 256;
+0 -8 0 15 -16662 -203904 -1 4 256;
 #X obj 367 326 nbx 2 15 -1e+37 1e+37 0 0 \$0-seqC7-S \$0-seqC7-R empty
-0 -8 0 15 -33289 -203904 -1 3 256;
+0 -8 0 15 -33289 -203904 -1 1 256;
 #X obj 293 326 nbx 2 15 -1e+37 1e+37 0 0 \$0-seqC5-S \$0-seqC5-R empty
 0 -8 0 15 -33289 -203904 -1 5 256;
 #X obj 330 326 nbx 2 15 -1e+37 1e+37 0 0 \$0-seqC6-S \$0-seqC6-R empty
 0 -8 0 15 -33289 -203904 -1 0 256;
 #X obj 256 326 nbx 2 15 -1e+37 1e+37 0 0 \$0-seqC4-S \$0-seqC4-R empty
-0 -8 0 15 -16662 -203904 -1 3 256;
+0 -8 0 15 -16662 -203904 -1 0 256;
 #X obj 107 341 hradio 37 1 0 8 \$0-seqcursor-S \$0-seqcursor-R empty
-0 -8 0 10 -228856 -58253 -1 0;
+0 -8 0 10 -228856 -58253 -1 7;
 #X obj 107 288 tgl 30 0 \$0-seqtoggle-S \$0-seqtoggle-R off 2 10 1
 8 -86277 -232576 -257985 0 1;
 #X obj 819 365 cnv 12 80 12 empty empty configure: 0 5 1 10 -33289
@@ -52,7 +52,7 @@
 #X obj 220 285 cnv 15 50 30 empty empty pattern 0 5 1 10 -164752 -262144
 0;
 #X obj 220 300 nbx 3 15 1 10 0 1 \$0-pattern empty empty 0 -8 0 15
--4160 -203904 -1 1 256;
+-4160 -203904 -1 10 256;
 #X obj 1087 -74 r \$0-configure;
 #X obj 139 286 cnv 15 50 30 empty empty div 0 5 1 10 -164752 -262144
 0;
@@ -66,8 +66,8 @@ empty 0 -8 0 25 -86277 -260097 -1 96 256;
 0;
 #X obj 633 356 nbx 3 20 -1e+37 1e+37 0 1 \$0-slicepitch-S \$0-slicepitch-R
 empty 0 -8 0 18 -139909 -261234 -1 0 256;
-#X obj 701 280 cnv 15 200 15 empty \$0-presetcanvas espelho.nvl 0 7
-1 12 -58569 -262130 0;
+#X obj 701 280 cnv 15 200 15 empty \$0-presetcanvas piano.nvl 0 7 1
+12 -58569 -262130 0;
 #X obj 357 309 hradio 13 1 1 4 \$0-tmode-S \$0-tmode-R /16 10 -8 0
 10 -86277 -260097 -262144 3;
 #X obj 799 362 bng 15 250 50 0 \$0-open empty empty 17 7 0 10 -99865
@@ -105,7 +105,7 @@ empty 0 -8 0 8 -262144 -1 -1 12;
 #X obj 627 283 knob 15 15 0 1 0 1 \$0-vol-S \$0-vol-R empty 0 -8 192
 8 -86853 -86277 -1 900 1;
 #X obj 1088 -28 s pd-\$0-configure_guts;
-#N canvas 358 439 450 300 \$0-configure_guts 0;
+#N canvas 364 439 450 300 \$0-configure_guts 0;
 #X obj 6 210 image NAVA100.gif;
 #X obj 11 18 tgl 40 1 \$0-ligasom aaaaaaaaaa DSP 0 -7 0 10 -99865 -262144
 -4160 1 1;
@@ -118,7 +118,7 @@ empty 0 -8 0 8 -262144 -1 -1 12;
 7 0 10 -262144 -1 -1;
 #X obj 168 42 bng 15 250 50 0 \$0-sequencer_btn empty sequencer 17
 7 0 10 -262144 -1 -1;
-#X obj 172 92 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 172 92 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #N canvas 6 53 558 488 \$0-tuning 0;
 #X obj 38 122 sel 122 120 99 118 98 110 109 44 46 29;
@@ -166,7 +166,7 @@ empty 0 -8 0 8 -262144 -1 -1 12;
 #X connect 17 0 15 0;
 #X restore 172 109 pd \$0-tuning;
 #X connect 7 0 8 0;
-#X restore 857 383 pd \$0-configure_guts;
+#X restore 857 386 pd \$0-configure_guts;
 #X msg 1088 -51 vis 1;
 #N canvas 54 277 450 300 \$0-pitch_guts 0;
 #X symbolatom 26 29 10 0 0 0 - #0-defaultpitch -;
@@ -182,7 +182,7 @@ empty 0 -8 0 8 -262144 -1 -1 12;
 #X connect 4 0 3 0;
 #X connect 6 0 5 0;
 #X restore 409 384 pd \$0-pitch_guts;
-#N canvas 244 127 938 612 \$0-sequencer_guts 0;
+#N canvas 250 127 938 612 \$0-sequencer_guts 0;
 #X obj 120 410 int;
 #X obj 156 410 int;
 #X obj 192 410 int;
@@ -416,16 +416,16 @@ empty 0 -8 0 8 -262144 -1 -1 12;
 1 6 1 6 1 4 0 6 4 2 4 0 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 0 1 4
 3 5 3 7 7 6 1 6 7 5 0 6 3 0 5 1 3 3 0 1 4 6 3 0 7 6 6 2 0;
 #X obj 56 574 prepend set;
-#X msg 56 594 0 7 6 0 3 5 0 3;
+#X msg 56 594 4 6 5 6 0 5 0 1;
 #X obj -8 43 t f f;
 #X obj -235 569 spigot;
 #X obj -189 569 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-1 1;
+0 1;
 #X text -241 414 recebe shift+u;
 #X text -237 398 (update preset);
 #X obj -269 381 r \$0-save;
 #X obj -277 204 r \$0-restore-pattern;
-#X obj 275 281 r \$0-presetname_save-S;
+#X obj 278 270 r \$0-presetname_save-S;
 #X obj 270 434 pack s s;
 #X obj 277 352 path;
 #X obj 277 331 t b s;
@@ -438,12 +438,13 @@ empty 0 -8 0 8 -262144 -1 -1 12;
 #X msg -172 279 read \$1;
 #X obj -262 245 tosymbol;
 #X text 707 81 espelho;
-#X obj 277 302 makefilename %s.ptn;
+#X obj 277 310 makefilename %s.ptn;
 #X obj -311 46 r \$0-clearmtx;
 #X floatatom -90 16 5 0 0 0 - - -;
 #X obj -172 324 mtx 10 8;
 #X obj -210 301 b;
 #X text 549 145 ligar em mtx_row para testes;
+#X obj 279 290 deny enter_text_here------;
 #X connect 0 0 31 0;
 #X connect 1 0 4 0;
 #X connect 3 0 4 0;
@@ -479,7 +480,7 @@ empty 0 -8 0 8 -262144 -1 -1 12;
 #X connect 33 0 32 1;
 #X connect 36 0 3 0;
 #X connect 37 0 49 0;
-#X connect 38 0 51 0;
+#X connect 38 0 57 0;
 #X connect 39 0 46 0;
 #X connect 40 0 45 0;
 #X connect 41 0 40 0;
@@ -499,6 +500,7 @@ empty 0 -8 0 8 -262144 -1 -1 12;
 #X connect 53 0 31 0;
 #X connect 54 0 1 0;
 #X connect 55 0 54 0;
+#X connect 57 0 51 0;
 #X restore 718 -30 pd paterns-nvl;
 #X connect 0 0 49 0;
 #X connect 1 0 49 0;
@@ -678,7 +680,7 @@ empty 0 -8 0 8 -262144 -1 -1 12;
 #X obj 156 142 t b;
 #N canvas 105 468 854 116 mouseslices 0;
 #X obj -779 27 hradio 50 1 0 16 \$0-slice \$0-slicerpanel empty 0 -8
-0 10 -54277 -83269 -1 9;
+0 10 -54277 -83269 -1 1;
 #X obj -715 1 cnv 15 30 20 empty empty 1 0 10 1 30 -204786 -13330 0
 ;
 #X obj -667 0 cnv 15 30 20 empty empty 2 0 12 1 30 -204786 -13330 0
@@ -1622,6 +1624,7 @@ alike;
 store -30 7 1 10 -13330 -204800 -228856;
 #X obj 844 298 bng 15 250 50 0 \$0-save \$0-enterR update 17 7 1 9
 -159808 -4160 -16662;
+#X obj 674 541 dac~;
 #X connect 20 0 91 1;
 #X connect 25 0 53 0;
 #X connect 29 0 91 2;
@@ -1633,7 +1636,9 @@ store -30 7 1 10 -13330 -204800 -228856;
 #X connect 55 0 91 0;
 #X connect 55 0 78 0;
 #X connect 57 0 65 0;
+#X connect 57 0 96 0;
 #X connect 57 1 66 0;
+#X connect 57 1 96 1;
 #X connect 59 0 61 0;
 #X connect 60 0 63 0;
 #X connect 61 0 62 0;
