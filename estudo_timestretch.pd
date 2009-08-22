@@ -1,0 +1,37 @@
+#N canvas 6 53 450 300 10;
+#X declare -lib bsaylor;
+#X obj 78 27 r \$0-syncscale-S;
+#X obj 52 159 s \$0-tstretchcnv;
+#X obj 157 159 s \$0-tstretchunit;
+#X msg 224 109 label %;
+#X msg 203 133 label bpm;
+#X msg 143 106 label ms;
+#X msg 27 107 label TimeStretch;
+#X msg 30 131 label SampleScratch;
+#X obj 81 48 sel 0 1 2;
+#X obj 395 123 import bsaylor;
+#X text 372 79 usar:;
+#X obj 364 100 pvoc~ \$0-sss 2048 4;
+#X obj 79 206 cnv 15 120 50 empty empty empty 0 7 1 12 -33289 -203904
+0;
+#X obj 97 214 cnv 15 100 20 empty \$0-tstretchcnv SampleScratch 0 5
+1 13 -86277 -262144 0;
+#X obj 167 232 cnv 15 30 20 empty \$0-tstretchunit ms 10 10 1 15 -86277
+-262144 0;
+#X obj 97 232 nbx 4 20 -1e+37 1e+37 0 0 \$0-tstrech-S \$0-tstrech-R
+empty 0 -8 0 18 -231946 -262144 -1 0 256;
+#X obj 83 213 vradio 13 1 0 3 \$0-syncscale-S \$0-syncscale-R empty
+0 -8 0 10 -86277 -260097 -1 0;
+#X text 77 187 to do (ainda nao implementado):;
+#X connect 0 0 8 0;
+#X connect 3 0 2 0;
+#X connect 4 0 2 0;
+#X connect 5 0 2 0;
+#X connect 6 0 1 0;
+#X connect 7 0 1 0;
+#X connect 8 0 7 0;
+#X connect 8 0 5 0;
+#X connect 8 1 6 0;
+#X connect 8 1 4 0;
+#X connect 8 2 6 0;
+#X connect 8 2 3 0;

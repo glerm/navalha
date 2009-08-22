@@ -1,21 +1,21 @@
 #N canvas 0 25 1255 658 10;
 #X declare -lib iem_tab;
 #X obj 106 266 hsl 795 12 0 1 0 0 \$0-end \$0-end-r empty -2 -8 0 10
--182874 -1 -1 51277 1;
+-182874 -1 -1 0 1;
 #X obj 103 116 cnv 15 800 148 empty \$0-cnvtable empty 20 12 0 14 -224813
 -1 0;
-#X obj 541 116 cnv 15 79 148 empty \$0-selectarea 4 0 80 0 141 -195986
--247041 0;
+#X obj 104 116 cnv 15 15 148 empty \$0-selectarea navalha 0 80 0 141
+-195986 -247041 0;
 #N canvas 0 22 450 300 (subpatch) 0;
-#X array \$0-L 81955 float 2;
-#X coords 0 1 81955 -1 800 75 1;
+#X array \$0-L 378564 float 2;
+#X coords 0 1 378564 -1 800 75 1;
 #X restore 103 115 graph;
 #N canvas 0 22 450 300 (subpatch) 0;
-#X array \$0-R 81955 float 2;
-#X coords 0 1 81955 -1 800 75 1;
+#X array \$0-R 378564 float 2;
+#X coords 0 1 378564 -1 800 75 1;
 #X restore 103 190 graph;
 #X obj 106 103 hsl 795 12 0 1 0 0 \$0-start \$0-start-r empty -2 -8
-0 10 -182874 -1 -1 43427 1;
+0 10 -182874 -1 -1 0 1;
 #X text 601 456 engine segmentos;
 #X obj 104 280 cnv 15 797 97 empty \$0-playercnv empty 20 12 0 14 -160781
 -1 0;
@@ -42,7 +42,7 @@
 #X obj 256 326 nbx 2 15 -1e+37 1e+37 0 0 \$0-seqC4-S \$0-seqC4-R empty
 0 -8 0 15 -16662 -203904 -1 1 256;
 #X obj 107 341 hradio 37 1 0 8 \$0-seqcursor-S \$0-seqcursor-R empty
-0 -8 0 10 -228856 -58253 -1 6;
+0 -8 0 10 -228856 -58253 -1 0;
 #X obj 107 288 tgl 30 0 \$0-seqtoggle-S \$0-seqtoggle-R off 2 10 1
 8 -86277 -232576 -257985 0 1;
 #X obj 819 365 cnv 12 80 12 empty empty configure: 0 5 1 10 -33289
@@ -66,8 +66,8 @@ empty 0 -8 0 25 -86277 -260097 -1 96 256;
 0;
 #X obj 633 356 nbx 3 20 -1e+37 1e+37 0 1 \$0-slicepitch-S \$0-slicepitch-R
 empty 0 -8 0 18 -139909 -261234 -1 0 256;
-#X obj 701 280 cnv 15 200 15 empty \$0-presetcanvas espelho.nvl 0 7
-1 12 -58569 -262130 0;
+#X obj 701 280 cnv 15 200 15 empty \$0-presetcanvas siri.nvl 0 7 1
+12 -58569 -262130 0;
 #X obj 357 309 hradio 13 1 1 4 \$0-tmode-S \$0-tmode-R /16 10 -8 0
 10 -86277 -260097 -262144 3;
 #X obj 799 362 bng 15 250 50 0 \$0-open empty empty 17 7 0 10 -99865
@@ -578,7 +578,7 @@ empty 0 -8 0 8 -262144 -1 -1 12;
 #X obj 156 142 t b;
 #N canvas 105 468 854 116 mouseslices 0;
 #X obj -779 27 hradio 50 1 0 16 \$0-slice \$0-slicerpanel empty 0 -8
-0 10 -54277 -83269 -1 4;
+0 10 -54277 -83269 -1 0;
 #X obj -715 1 cnv 15 30 20 empty empty 1 0 10 1 30 -204786 -13330 0
 ;
 #X obj -667 0 cnv 15 30 20 empty empty 2 0 12 1 30 -204786 -13330 0
@@ -1494,13 +1494,13 @@ alike;
 #X obj 555 304 bng 12 250 50 0 \$0-seqzero empty 0 0 -7 0 10 -262144
 -1 -262144;
 #X obj 515 301 nbx 2 15 0 16 0 1 \$0-randomfactor empty empty 0 -8
-0 15 -4160 -203904 -1 6 256;
+0 15 -4160 -203904 -1 8 256;
 #X obj 442 -86 inlet;
 #X obj 120 568 outlet;
 #X obj 912 217 inlet;
 #X obj 909 263 makefilename presets/%s.nvl;
 #X obj 910 243 tosymbol;
-#X obj 409 533 outlet;
+#X obj 409 528 outlet;
 #X obj 351 533 outlet;
 #X obj 602 386 - 12;
 #X obj 405 327 bng 10 250 50 1 empty empty empty 17 7 0 10 -262144
