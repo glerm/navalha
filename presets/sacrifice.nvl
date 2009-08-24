@@ -1,5 +1,5 @@
-pattern /home/glerm/navalha/presets/patterns/sacrifice.ptn;
-filename /home/glerm/navalha/samples/sacrifice.wav;
+pattern presets/patterns/sacrifice.ptn;
+filename samples/sacrifice.wav;
 end 0 0.0982368;
 end 1 0.230479;
 end 2 0.31864;

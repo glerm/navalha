@@ -1,4 +1,4 @@
-pattern /home/glerm/navalha/presets/patterns/espelho.ptn;
+pattern presets/patterns/espelho.ptn;
 filename samples/espelhoriff.wav;
 end 0 0.17772;
 end 1 0.371715;

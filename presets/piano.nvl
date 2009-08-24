@@ -1,4 +1,4 @@
-pattern /home/glerm/navalha/presets/patterns/piano.ptn;
+pattern presets/patterns/piano.ptn;
 filename samples/pianito.wav;
 end 0 0.0528967;
 end 1 0.104534;

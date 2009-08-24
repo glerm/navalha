@@ -1,5 +1,5 @@
-pattern /home/glerm/navalha/presets/patterns/shadebossa.ptn;
-filename /home/glerm/navalha/samples/shadebossa.wav;
+pattern presets/patterns/shadebossa.ptn;
+filename samples/shadebossa.wav;
 end 0 0.119647;
 end 1 0.238035;
 end 2 0.365239;
