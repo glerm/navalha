@@ -1,0 +1,94 @@
+#N canvas 0 24 1018 689 10;
+#X obj 54 585 print RESULT;
+#X obj 54 334 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X msg 95 353 samples/;
+#X msg 113 509 C:/Documents and Settings/tom/My Documents/pd/parent.test.pd
+;
+#X obj 54 558 path;
+#X obj 52 12 cnv 15 400 100 empty empty empty 20 12 0 14 -249661 -66577
+0;
+#X text 57 57 author: mrtoftrash@gmail.com;
+#X text 57 68 version: 2009-06-07 (initial release);
+#X text 79 330 <- a bang will output the root patch's path;
+#X text 159 352 <- Sending a relative path will append that path to
+the root patch's path;
+#X text 113 427 Linux and OS X;
+#X text 120 467 Windows;
+#X msg 114 448 /unchanged/because/of/the/slash/at/the/start;
+#X msg 113 487 C:/unchanged/because/of/the/:/as/second/char;
+#X obj 544 44 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X msg 593 158 samples/;
+#X text 569 42 <- a bang will output the root patch's path;
+#X obj 570 112 openpanel;
+#X obj 570 92 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X symbolatom 570 134 50 0 0 0 - - -;
+#X symbolatom 544 233 50 0 0 0 - - -;
+#X text 575 60 Anything else will be treated as a path;
+#X obj 544 202 path relative;
+#X text 653 156 <- Relative paths are unchanged;
+#X text 111 414 Absolute paths are unchanged;
+#X obj 545 282 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 545 395 print CURRENT;
+#X obj 545 368 path current;
+#X text 575 282 <- a bang will output the current patch's path;
+#X text 58 12 description: outputs or transform paths.;
+#X text 57 46 tags: file tof;
+#X text 49 114 [path] can convert relative paths to absolute paths
+or the other way around. The base path can be either the path of the
+current patch \, or the path of the root patch.;
+#X text 196 157 -- keywords --;
+#X text 47 220 current: use the current patch's path (instead of using
+the root patch's path).;
+#X text 47 254 relative: transform absolute paths into relative paths
+(instead of the other way around).;
+#X text 177 306 -- default behavior --;
+#X text 710 260 -- current --;
+#X msg 573 315 samples/;
+#X text 637 314 <- Sending a relative path will append that path to
+the current patch's path;
+#X text 685 9 -- relative --;
+#X obj 545 455 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X msg 594 569 samples/;
+#X obj 571 523 openpanel;
+#X obj 571 503 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X symbolatom 571 545 50 0 0 0 - - -;
+#X symbolatom 545 634 50 0 0 0 - - -;
+#X text 576 471 Anything else will be treated as a path;
+#X text 654 567 <- Relative paths are unchanged;
+#X text 680 427 -- relative & current --;
+#X obj 545 603 path relative current;
+#X text 48 176 You can use the "current" and "relative" keywords to
+change the default behavior. The order of the keywords is not important.
+;
+#X text 570 453 <- a bang will output the current patch's path;
+#X text 591 82 Absolute paths will be made relative to the root patch's
+path;
+#X text 596 494 Absolute paths will be made relative to the current
+patch's path;
+#X connect 1 0 4 0;
+#X connect 2 0 4 0;
+#X connect 3 0 4 0;
+#X connect 4 0 0 0;
+#X connect 12 0 4 0;
+#X connect 13 0 4 0;
+#X connect 14 0 22 0;
+#X connect 15 0 22 0;
+#X connect 17 0 19 0;
+#X connect 18 0 17 0;
+#X connect 19 0 22 0;
+#X connect 22 0 20 0;
+#X connect 25 0 27 0;
+#X connect 27 0 26 0;
+#X connect 37 0 27 0;
+#X connect 40 0 49 0;
+#X connect 41 0 49 0;
+#X connect 42 0 44 0;
+#X connect 43 0 42 0;
+#X connect 44 0 49 0;
+#X connect 49 0 45 0;
