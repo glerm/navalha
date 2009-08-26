@@ -1,51 +1,283 @@
-#N canvas 19 53 1255 686 10;
+#N canvas 6 53 1268 686 10;
+#X declare -lib iemmatrix;
 #X declare -lib iem_tab;
+#X declare -lib iemmatrix;
 #X declare -lib iem_tab;
-#X obj 639 300 s~ n3;
-#X obj 1013 357 r~ n3;
-#X obj 1111 356 r~ n4;
-#X obj 841 299 s~ n4;
-#X obj 1050 357 r~ n1;
-#X obj 1147 357 r~ n2;
-#X obj 639 616 s~ n1;
-#X obj 841 618 s~ n2;
-#X msg 914 377 piano;
-#X msg 915 398 breakcore;
-#X msg 915 419 metadata;
-#X obj 914 354 loadbang;
-#X obj 1087 286 vsl 15 128 0 1 0 1 empty empty empty 0 -9 0 10 -260097
--1 -1 8890 1;
-#X obj 1072 423 *~;
-#X obj 1190 284 vsl 15 128 0 1 0 1 empty empty empty 0 -9 0 10 -260097
--1 -1 11700 1;
-#X obj 1175 421 *~;
-#X obj 1122 480 dac~;
-#X obj 1123 289 tgl 40 1 \$0-ligasom aaaaaaaaaa DSP 0 -7 0 10 -99865
--262144 -4160 1 1;
-#X floatatom 441 300 5 0 0 0 - - -;
-#X floatatom 445 618 5 0 0 0 - - -;
-#X obj 42 15 nvl;
-#X floatatom 241 303 5 0 0 0 - - -;
-#X floatatom 241 622 5 0 0 0 - - -;
-#X obj 42 331 nvl;
-#X connect 1 0 13 0;
-#X connect 2 0 15 0;
-#X connect 4 0 13 0;
-#X connect 5 0 15 0;
-#X connect 8 0 23 1;
-#X connect 9 0 23 1;
-#X connect 10 0 23 1;
-#X connect 11 0 8 0;
-#X connect 12 0 13 1;
-#X connect 13 0 16 0;
-#X connect 14 0 15 1;
-#X connect 15 0 16 1;
-#X connect 20 0 23 0;
-#X connect 20 1 21 0;
-#X connect 20 2 18 0;
-#X connect 20 3 0 0;
-#X connect 20 4 3 0;
-#X connect 23 1 22 0;
-#X connect 23 2 19 0;
-#X connect 23 3 6 0;
-#X connect 23 4 7 0;
+#X obj 609 300 s~ n3;
+#X obj 792 304 s~ n4;
+#X obj 609 616 s~ n1;
+#X obj 786 630 s~ n2;
+#X msg 828 403 piano;
+#X msg 826 422 breakcore;
+#X msg 826 443 metadata;
+#X obj 829 381 loadbang;
+#X floatatom 411 300 5 0 0 0 - - -;
+#X obj 12 15 nvl;
+#X floatatom 211 303 5 0 0 0 - - -;
+#X obj 2 304 spigot;
+#X obj 44 304 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 12 331 nvl;
+#X text 245 303 passo do sequenciador;
+#X text 645 298 saida esqueda dsp;
+#X text 687 309 saida direita dsp;
+#X text 60 301 conecta master-slave;
+#X msg 832 29 sacrifice;
+#X msg 833 49 shadebossa;
+#X msg 834 70 bulgar;
+#X obj 12 623 spigot;
+#X text 55 619 voce pode conectar outros aqui;
+#X text 56 631 basta criar o objeto [nvl] logo abaixo;
+#X obj 1019 23 cnv 15 100 60 empty empty [nvl] 20 12 0 50 -203904 -66577
+0;
+#X text 445 297 nota atual (pitch);
+#X obj 1092 662 r~ n3;
+#X obj 1206 645 r~ n4;
+#X obj 1091 641 r~ n1;
+#X obj 1206 661 r~ n2;
+#X obj 1166 593 vsl 15 64 0 1 0 0 empty \$0-masterVOLnvl empty 0 -9
+0 10 -260097 -1 -1 3471 1;
+#X obj 1127 661 *~;
+#X obj 1184 593 vsl 15 64 0 1 0 0 empty \$0-masterVOLnvl empty 0 -9
+0 10 -260097 -1 -1 3471 1;
+#X obj 1181 661 *~;
+#X obj 1151 661 dac~;
+#X obj 1202 602 tgl 40 1 \$0-ligasom \$0-masterVOLnvl DSP 0 -7 0 10
+-99865 -262144 -4160 0.55102 0.55102;
+#X floatatom 1091 621 5 0 0 0 - #0-masterVOLnvl -;
+#X text 1022 66 Navalha abstraction v.1.0;
+#X text 825 -2 carrega presets .nvl;
+#X text 823 10 que estao no seu folder;
+#X obj 1037 621 cnv 15 50 50 empty empty master_volume -60 -10 0 15
+-257985 -1 0;
+#X obj 1037 621 knob 50 50 0 1 0 1 \$0-masterVOLnvl naousar empty 0
+-8 192 8 -203904 -260097 -1 2700 1;
+#X msg 930 550 \; pd-detalhes-help vis 1;
+#X obj 930 533 r \$0-detalhes;
+#X obj 915 86 cnv 15 330 500 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X text 918 94 O objeto [nvl] cria instancias de um sequenciador;
+#X text 918 128 salvas na propria interface grafica deste objeto.;
+#X text 918 149 Estabelece tambem um padrao de metadados;
+#X text 918 110 de fatias (slices) de .wav que podem ser editadas e
+;
+#X text 918 166 que permite que estas fatias sejam recarregadas;
+#X text 918 183 na exata posicao que foram salvas - arquivos .nvl.
+;
+#X text 918 203 Estas fatias podem ser tocadas de maneira nao linear
+;
+#X text 918 220 modificando os padroes (patterns) do sequenciador;
+#X text 918 329 Estes padroes tambem podem ser salvos dentro do;
+#X text 918 346 arquivo .nvl criando desta maneira cliches (riffs)
+;
+#X text 918 361 que podem ser recuperados e repetidos durante a;
+#X text 918 378 performance.;
+#X text 918 252 o numero da fatia atual na ordem deste "pattern".;
+#N canvas 6 53 1268 686 detalhes-help 0;
+#X obj 161 355 cnv 15 300 80 empty empty empty 20 12 0 14 -204767 -66577
+0;
+#X obj 162 358 bng 50 250 50 0 empty empty -->abrir 50 25 0 30 -164101
+-1 -86853;
+#N canvas 707 401 367 169 pitchbpmvol-help 0;
+#X obj -122 21 cnv 15 360 130 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X text -117 42 a) Outlet que mostra a nota (pitch) atual.;
+#X text -117 59 b) Semitom relativo ao tom original da musica;
+#X text -95 126 ou pelas teclas "zxcvbnm \, .";
+#X text -117 96 d) Muda tempo do sequencer em batidas por minuto.;
+#X text -117 113 e) Tom predominante atual. Os botoes acima mudam o
+semitom \,;
+#X text -117 77 c) Volume geral do [nvl] - o pequeno gira stereo juntos.
+;
+#X restore 343 398 pd pitchbpmvol-help;
+#X msg 162 440 \; pd-pitchbpmvol-help vis 1;
+#X obj -92 17 cnv 15 100 60 empty empty [nvl] 20 12 0 50 -203904 -66577
+0;
+#X obj 713 33 cnv 15 300 80 empty empty empty 20 12 0 14 -204767 -66577
+0;
+#X obj 715 25 bng 50 250 50 0 empty empty -->abrir 50 25 0 30 -164101
+-1 -86853;
+#N canvas 436 451 383 218 savepreset-help 0;
+#X obj -132 5 cnv 15 360 200 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X text -128 13 ~) Saidas direita e esquerda.;
+#X text -127 49 b) Hack-me: atalho para abrir os codigos.;
+#X text -127 67 c) Entrada do nome do arquivo a ser salvo. Escreva
+o nome;
+#X text -108 81 sem extensao .nvl e aperte enter.;
+#X text -127 32 a) Abre um arquivo wav para editar fatias (slices).
+;
+#X text -108 95 Os patterns e slices salvos no ultimo store (shift+s)
+;
+#X text -108 109 serao salvos no arquivo.;
+#X text -127 127 d) Nome do .nvl atualmente em execucao.;
+#X text -127 144 e) Abre um .nvl da pasta.;
+#X text -100 181 se for copiar arquivos .nvl e wavs de outros locais.
+;
+#X text -131 169 *PS: Sempre utilize as pastas "samples" e "presets"
+;
+#X restore 900 69 pd savepreset-help;
+#X msg 715 117 \; pd-savepreset-help vis 1;
+#X obj 871 197 image imgs/save_preset.gif;
+#X obj -113 85 image NAVA100.gif;
+#X obj 298 8 cnv 15 300 80 empty empty empty 20 12 0 14 -204767 -66577
+0;
+#X obj 298 7 bng 50 250 50 0 empty empty -->abrir 50 25 0 30 -164101
+-1 -86853;
+#N canvas 504 248 390 491 pattern-help 0;
+#X obj -135 9 cnv 15 360 470 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X text -132 22 a) Outlet de saida do sincronismo master-slave.;
+#X text -113 36 conduz o cursor do sequencer e o bpm atual.;
+#X text -132 54 b) Outlet que mostra posicao atual do cursor.;
+#X text -132 77 c) Sequencia de slices que sera executada durante;
+#X text -113 91 a passagem do cursor master.;
+#X text -132 112 d) Zera todo o pattern de slices.;
+#X text -115 150 e gera um pattern randomico.;
+#X text -132 136 e) Escolhe o numero de slices que vao ser randomizados
+;
+#X text -133 172 f) Pattern da sequencia comum pra frente e pra tras.
+;
+#X text -132 193 g) Carrega 10 patterns diferentes que estao salvos
+;
+#X text -113 207 na matriz buffer da memoria. Estes patterns;
+#X text -114 222 sao carregados do arquivo .nvl ou podem ser salvos
+;
+#X text -113 237 com o procedimento descrito abaixo no item "h".;
+#X text -133 257 h) Botao store (ou o atalho shift+s) serve para;
+#X text -114 271 atualizar no buffer de memoria ram (nao salva em disco!)
+;
+#X text -115 286 os atuais presets dos slices e patterns.;
+#X text -114 301 Para salvar em disco \, voce precisa dar um nome de
+arquivo;
+#X text -114 315 na janela save_preset do canto inferior direito.;
+#X text -115 349 vai correr. Isto torna possivel fazer sequencia com
+;
+#X text -114 364 tempos impares ou diferentes de 8 batidas.;
+#X text -134 335 i) Number box que define o numero de celulas que o
+cursor;
+#X text -133 384 j) Liga/Desliga os atalhos e controles de teclado.
+;
+#X text -114 420 de um master \, mas obviamente nao estarao sincronizados.
+;
+#X text -132 405 k) Liga/Desliga sequencer master. E possivel tocar
+mais;
+#X text -132 439 j) Cursor do sequenciador - dispara slice atual.;
+#X restore 504 51 pd pattern-help;
+#X msg 298 127 \; pd-pattern-help vis 1;
+#X obj 303 202 image imgs/pattern_sequencer.gif;
+#X obj 625 350 cnv 15 300 80 empty empty empty 20 12 0 14 -204767 -66577
+0;
+#X obj 626 350 bng 50 250 50 0 empty empty -->abrir 50 25 0 30 -164101
+-1 -86853;
+#N canvas 84 417 423 265 slices-help 0;
+#X obj -112 38 cnv 15 400 180 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X text -107 52 a) Slider para edicao dos trechos (final);
+#X text -88 65 o de cima seleciona inicios.;
+#X text -108 108 b) Esta tabela carrega o wav a ser executado.;
+#X text -87 122 Utilize barra de espaco para tocar o trecho todo.;
+#X text -107 139 c) Fatia (slice) da selecao carregada do .nvl ou editada.
+;
+#X text -91 152 quando modificar um slice utilize shift+s para guardar
+;
+#X text -90 165 em buffer e a entrada "save preset" para salvar arquivo.
+;
+#X text -88 79 Utilizar os atalhos "qwertyuiop" para selecionar de
+0 a 7;
+#X text -87 94 Utilizar os atalhos "asdfghjkl" para selecionar de 8
+a 15;
+#X restore 836 392 pd slices-help;
+#X msg 626 440 \; pd-slices-help vis 1;
+#X obj 765 517 image imgs/slices.gif;
+#X obj -154 282 cnv 15 200 100 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X text -147 291 clique nos bangs;
+#X text -146 306 para entender os detalhes;
+#X obj -47 292 bng 15 250 50 0 \$0-atalhos empty empty 50 25 0 30 -164101
+-1 -86853;
+#X obj 192 503 image imgs/bpm_pitch_vol.gif;
+#X text -145 332 IMPORTANTE:;
+#X obj -140 348 bng 15 250 50 0 \$0-atalhos empty empty 50 25 0 30
+-164101 -1 -86853;
+#X text -123 348 <-- aprenda os atalhos de;
+#X text -84 360 teclado!;
+#N canvas 42 221 422 219 atalhos-help 0;
+#X obj -108 14 cnv 15 400 180 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X text -86 42 Utilizar os atalhos "qwertyuiop" para slices de 0 a
+7;
+#X text -85 57 Utilizar os atalhos "asdfghjkl" para slices de 8 a 15
+;
+#X text -86 29 Utilizar os atalhos "1234567890" para slices de 1 a
+10;
+#X text -84 72 Utilizar os atalhos "zxcvbnm \, ." para mudar o pitch
+;
+#X text -85 86 Utilizar barra de espaco para tocar o sample todo;
+#X text -87 108 Sempre usar shift+s para atualizar modificacoes nos
+presets.;
+#X text -86 126 Salvar escrevendo um novo nome no "save preset";
+#X text -85 138 e depois enter.;
+#X restore 994 650 pd atalhos-help;
+#X msg 949 615 \; pd-atalhos-help vis 1;
+#X obj 999 598 r \$0-atalhos;
+#X connect 1 0 3 0;
+#X connect 6 0 8 0;
+#X connect 12 0 14 0;
+#X connect 17 0 19 0;
+#X connect 32 0 31 0;
+#X restore 1142 478 pd detalhes-help;
+#X text 918 236 que toca numa velocidade determinada em batidas/minuto
+;
+#X text 918 401 Os controles de edicao e perfomance ja estao todos
+;
+#X text 918 450 "ascii-keys".;
+#X text 918 290 primeiros inlets outlets - determinando um master;
+#X text 918 273 Os objetos podem ser conectados em cascata pelos;
+#X text 918 305 sequencer para performances controlando "slaves" nvl.
+;
+#X obj 915 475 cnv 15 330 20 empty empty empty 20 12 0 14 -257025 -66577
+0;
+#X obj 922 475 bng 20 250 50 0 \$0-detalhes empty empty 17 7 0 10 -86853
+-257985 -1;
+#X text 947 478 --> Clique aqui para mais detalhes sobre o uso.;
+#X text 917 567 thanks to all PD developers that made it possible.
+;
+#X obj 915 496 cnv 15 330 40 empty empty empty 20 12 0 14 -232915 -66577
+0;
+#X text 919 512 e objetos relacionados em http://navalha.devolts.org
+;
+#X text 918 418 mapeados para controle via teclado do seu computador.
+;
+#X text 918 433 Se voce necessita desligar essa funcao use o botao
+;
+#X text 916 553 GNU/GPL Glerm Soares 2009 http://glerm.devolts.org
+;
+#X text 919 497 e acompanhe novos tutoriais \, pacotes de arquivos
+.nvl;
+#X connect 4 0 13 1;
+#X connect 5 0 13 1;
+#X connect 6 0 13 1;
+#X connect 7 0 4 0;
+#X connect 9 0 11 0;
+#X connect 9 1 10 0;
+#X connect 9 2 8 0;
+#X connect 9 3 0 0;
+#X connect 9 4 1 0;
+#X connect 11 0 13 0;
+#X connect 12 0 11 1;
+#X connect 13 0 21 0;
+#X connect 13 3 2 0;
+#X connect 13 4 3 0;
+#X connect 18 0 9 1;
+#X connect 19 0 9 1;
+#X connect 20 0 9 1;
+#X connect 26 0 31 0;
+#X connect 27 0 33 0;
+#X connect 28 0 31 0;
+#X connect 29 0 33 0;
+#X connect 30 0 31 1;
+#X connect 31 0 34 0;
+#X connect 32 0 33 1;
+#X connect 33 0 34 1;
+#X connect 43 0 42 0;
