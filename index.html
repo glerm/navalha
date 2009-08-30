@@ -1,90 +1,63 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-
-	<title>glerm/navalha @ GitHub</title>
-	
-	<style type="text/css">
-		body {
-  		margin-top: 1.0em;
-  		background-color: #80d488;
-		  font-family: "Helvetica,Arial,FreeSans"; 
-  		color: #000000;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-		h1 { font-size: 3.8em; color: #7f2b77; margin-bottom: 3px; }
-		h1 .small { font-size: 0.4em; }
-		h1 a { text-decoration: none }
-		h2 { font-size: 1.5em; color: #7f2b77; }
-    h3 { text-align: center; color: #7f2b77; }
-    a { color: #7f2b77; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-		pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-	</style>
-	
-</head>
-
-<body>
-  <a href="http://github.com/glerm/navalha"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
-  
-  <div id="container">
-
-    <div class="download">
-      <a href="http://github.com/glerm/navalha/zipball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
-      <a href="http://github.com/glerm/navalha/tarball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
-    </div>
-      
-    <h1><a href="http://github.com/glerm/navalha">navalha</a> 
-      <span class="small">by <a href="http://github.com/glerm">glerm</a></span></h1>
-
-    <div class="description">
-      Navalha é um software desenvolvido com o intuito de tornar-se um estudo de caso em desenvolvimento rápido prototipado em Puredata de um sistema para performances musicais com interface gráfica e sistema de gerenciamento de "presets" (configurações) salvos em disco rígido. Além de sua utilidade para musicos e artistas é também um detalhado estudo de caso de desenvolvimento em puredata, podendo ser usado como estudo para implementação de outros algoritmos e idéias.
-    </div>
-
-    <p>O objeto nvl cria instâncias de um sequenciador de fatias (slices) de .wav que podem ser editadas e salvas na própria interface gráfica deste objeto.
-
-Estabelece também um arquivo padrão de metadados que permite que estas fatias sejam recarregadas na exata posição de onde foram salvas anteriormente - o arquivo .nvl.
-
-Estas fatias podem ser tocadas de maneira não-linear modificando padrões (patterns) de um sequenciador embutido que toca numa velocidade determinada em batidas por minuto (podem ser subdivididas dentro desta mesma batida) a atual fatia numa sequencia determinada por este "pattern".
-
-Os objetos [nvl] podem ser conectados em cascata, pelos seus primeiros inlets e outlets - determindo assim um master da conexão mais acima que pode sincronizar os sequenciadores de patterns - determinando um "master sequencer" que irá controlar os demais "slaves" nvl.
-
-Estes pattern também podem ser salvos dentro do arquivo .nvl criando assim uma possével navegação de clichês (ou "riffs") que podem ser recuperados e repetidos durante uma performance.
-
-Os controles de edição da performance já estão todos mapeados para controlesvia teclado do seu computador. Se você necessita desligar esta função num objeto nvl, basta desligar a função "key" que fica no canto inferior esquerdo. Obviamente se duas instâncias nvl estiverem com "key" ligado, ambas serão controladas simultaneamente pelo seu teclado.</p><h2>Authors</h2>
-<p>Glerm Soares (organismo@gmail.com)<br/><br/>      </p>
-<h2>Contact</h2>
-<p>Glerm Soares (organismo@gmail.com)<br/>      </p>
-
-
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="http://github.com/glerm/navalha/zipball/master">zip</a> or
-      <a href="http://github.com/glerm/navalha/tarball/master">tar</a> formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/glerm/navalha</pre>
-    </p>
-      
-    <div class="footer">
-      get the source code on GitHub : <a href="http://github.com/glerm/navalha">glerm/navalha</a>
-    </div>
-    
-  </div>
-
-  
-</body>
-</html>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="http://juntadados.org/sites/default/files/nvllogo.png" alt="" /></p>
+<p style="text-align: center;">&nbsp;</p>
+<h2 style="text-align: center;">Baixar:</h2>
+<p style="text-align: center;"><a href="http://github.com/glerm/navalha/zipball/master"> <img src="http://github.com/images/modules/download/zip.png" border="0" alt="" width="90" /></a> <a href="http://github.com/glerm/navalha/tarball/master"> <img src="http://github.com/images/modules/download/tar.png" border="0" alt="" width="90" /></a></p>
+<p style="text-align: center;">&nbsp;</p>
+<h1>O Software como trabalho artístico - Artesanato de código</h1>
+<p>&nbsp;</p>
+<p>Este projeto é um estudo para estimular uma atividade que torna-se cada vez mais evidente no universo do software livre e código aberto - a customização de softwares para idéias artísticas e para produção multimídia em geral permitindo aquele que via criar desenvolver suas idéias abstratas partindo de maneiras rápidas de trabalhar cm código, ao invés da lógica onde o artista e visto como um usuário de interfaces ja prontas que ao tentar "prever aquilo que quer o usuário" também acaba impondo sua prática de uso.</p>
+<p>Com a escolha da linguagem puredata, que possui uma comunidade extremamente produtiva e colaborativa, esta interface, por mais que esteja apresentando uma prática fechada em uma idéia de recortes de samples e um certo escopo, aprsenta-se também como a abertura para ser recombinada com outros códigos e idéias, colocando-se como uma peça a ser aberta e recombinada, e sendo desde o início deste projeto documentada da maneira mais detalhada possível para permitir ta recombinação.</p>
+<p style="text-align: left;">Este é um Software (ou "patch") totalmente desenvolvido com a liguagem Puredata, como um "objeto" para esta linguagem que pode ser acoplado em qualquer outro objeto disponível pela comunidade de desenvolvimento deste software e totalmente compatível com a versão distribuída no pacote "Pd-extended". Para mais detalhes sobre instalção de puredata veja <a href="http://artesanato.devolts.org/?page_id=95">esta página</a>.</p>
+<p>Navalha é um software desenvolvido com o intuito de tornar-se um estudo de caso em desenvolvimento rápido prototipado em Puredata de um sistema para performances musicais com interface gráfica e sistema de gerenciamento de "presets" (configurações) salvos em disco rígido. Além de sua utilidade para musicos e artistas é tambppem um detalhado estud de caso de desenvolvimento em puredata, podendo ser usado como estudo para implementação de outros algoritmos e idéias.</p>
+<h1>O objeto gráfico - nvl</h1>
+<p><img src="http://juntadados.org/sites/default/files/navalha.png" alt="" /></p>
+<p>&nbsp;</p>
+<p>O objeto nvl cria instâncias de um sequenciador de fatias (slices) de .wav que podem ser editadas e salvas na própria interface gráfica deste objeto.<br /><br />Estabelece também um arquivo padrão de metadados que permite que estas fatias sejam recarregadas na exata posição de onde foram salvas anteriormente - o arquivo .nvl.<br /><br />Estas fatias podem ser tocadas de maneira não-linear modificando padrões (patterns) de um sequenciador embutido que toca numa velocidade determinada em batidas por minuto (podem ser subdivididas dentro desta mesma batida) a atual fatia numa sequencia determinada por este "pattern".<br /><br />Os objetos [nvl] podem ser conectados em cascata, pelos seus primeiros inlets e outlets - determindo assim um master da conexão mais acima que pode sincronizar os sequenciadores de patterns - determinando um "master sequencer" que irá controlar os demais "slaves" nvl.<br /><br />Estes pattern também podem ser salvos dentro do arquivo .nvl criando assim uma possével navegação de clichês (ou "riffs") que podem ser recuperados e repetidos durante uma performance.<br /><br />Os controles de edição da performance já estão todos mapeados para controlesvia teclado do seu computador. Se você necessita desligar esta função num objeto nvl, basta desligar a função "key" que fica no canto inferior esquerdo. Obviamente se duas instâncias nvl estiverem com "key" ligado, ambas serão controladas simultaneamente pelo seu teclado.</p>
+<p>&nbsp;</p>
+<h1>[nvl] - Interface Gráfica e padrão de entradas e saídas</h1>
+<p>&nbsp;</p>
+<p><img src="http://juntadados.org/sites/default/files/novolayout_0.png" alt="" /></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h1>Sequencer</h1>
+<p><img src="http://juntadados.org/sites/default/files/pattern_sequencer.gif" alt="" /></p>
+<p><br />a) Outlet de saída do sincronismo master-slave. Conduz o cursor do sequencer e o bpm atual.<br />b) Outlet que mostra a posição atual do cursor.<br />c) Sequencia de slices que será executada durante a passagem do cursor master.<br />d) Zera todo o pattern de slices.<br />e) Escolhe um número limite de slices que será randomizado e cria uma sequência de números randômicos para um pattern.<br />f) Pattern de uma sequencia padrão para frente e para trás.<br />g) Carrega 10 patterns diferentes que estão salvos na matriz buffer da memoria. Estes patterns são carregados no arquivo .nvl ou podem ser salvos com o procedimento descrito abaixo no item "h".<br />h) Botão store (ou atalho shift+s) serve para atualizar no buffer de memória ram (não salva em disco) os atuais presets dos slices e patterns. Para salvar em disco, voce precisa dar um nome de arquivo na janela save_preset do canto inferior direito.<br />i) Number box que define o número de células que o cursor vai correr. Isto torna possível fazer uma sequẽncia com tempos ímpares ou diferentes de 8 batidas por compasso.<br />j) Liga/Desliga os atalhos do controle de teclado.<br />k) Liga/desliga sequencia master. É possível tocar mais de um master, mas obviamente não estarão imediatamente sincronizados.<br />j) Cursor do sequenciador, dispara fatia atual.<br /><br /></p>
+<h1>Pitch-Bpm-Volume</h1>
+<p><img src="http://juntadados.org/sites/default/files/bpm_pitch_vol.png" alt="" /></p>
+<p><br />a) Outlet que mostra a nota (pitch) atual (numa escala númerica cromática com 12 notas para cada sequência de dó a dó - contando todos os semitons).<br />b) Semitom relativo ao tom original da música, em execução naquele instante.<br />c) Volume geral deste objeto [nvl] - o pequeno gira os dois juntos em stereo.<br />d) Muda tempo do Sequencer em batidas por minutos. Determina o numero de subdivisões por compasso.<br />e) Tom predominante atual, aplicada ou não uma variação de tonalidade. Os botões logo acima podem modificar esta tonalidade por semitom. Ou pelas teclas "zxcvbnm,."<br /><br /><br /></p>
+<h1>Save Preset</h1>
+<p><img src="http://juntadados.org/sites/default/files/save_preset.gif" alt="" /></p>
+<p><br />~) Saídas de áudio esquerda e direita.<br />a) Abre um arquivo wav para editas as fatias (slices).<br />b) Hack-me: atalho para abrir os códigos.<br />c) Entrada do nome de arquivo a ser salvo. Escreva o nome sem a extensão .nvl e aperte enter. Os patterns salvos no último store (shift+s) serão salvos no arquivo<br />d) Nome do .nvl atualmente em execução.<br />e) Abre um .nvl da pasta.<br /><br />*PS: Sempre utilize as pastas "samples" e "presets". Se for utilizar .nvl e .wavs de sua máquina de outras pastas. Não utilize samplers muito longos e de preferência recorte anteriormente o trecho que você quer utilizar, para não sobrecarregar o buffer. Este é um software de performance em tempo real, e não uma suíte de edição de áudio - para isso você tem softwares como audacity e ardour.<br /><br /></p>
+<h1>Slices</h1>
+<p>&nbsp;</p>
+<p><img src="http://juntadados.org/sites/default/files/slices.gif" alt="" /></p>
+<p><br />a) Sliders para seleção dos trechos. Acima ínicio e abaixo o final. Quando editando utilizar os atalhos "qwertyuiop" para selecionar os trechos de 0 até 7, e os atalhos "asdfghjkl" para 8 a 15.<br />b) Esta tabela carrega o .wav que será executado e/ou fatiado. Utilize a barra de espaço para tocar o trecho todo.<br />c) Fatia ("slice") da seleção carregada pelo arquivo .nvl ou atualmente em buffer de memória ram. Quando modificar o trecho de um slice não esqueça de atualizar no buffer de memória ram com o atalho shift+s ou o botão Store. Utilize a entrada "save_preset" para salvar o arquivo em disco.<br /><br /><br /></p>
+<h1>A entrada de controles externa - o segundo inlet</h1>
+<p>A maioria dos controles acima pode ser tambem manipulada por meio do segundo outlet, utilizando uma mensagem no formato "nome do modificador variavel". Exemplo: pitch $1 , onde $1 seria a varível de entrada do paramêtro pitch.</p>
+<p>&nbsp;</p>
+<p>Veja na figura abaixo (e no arquivo nvl-help.pd) uma lista com todos os modificadores:</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><img src="http://juntadados.org/sites/default/files/inletctrl.png" alt="" /></p>
+<p>&nbsp;</p>
+<ul>
+</ul>
+<ol>
+<li>slice (numero da fatia)</li>
+<li>tempo (com duas variaveis - bpm e divisao do compasso)</li>
+<li>preset (nome do arquivo nvl - que deve estar na pasta presets)</li>
+<li>pattern (numero do pattern do buffer de 1 a 10)</li>
+<li>key (liga e desliga acesso a teclado)</li>
+<li>seq (liga e desliga sequenciador)</li>
+<li>vol (volume de 0 a 1)</li>
+<li>random (numero limite da celula do pattern seguido de gerador randomico de pattern)</li>
+</ol> 
+<ul>
+</ul>
+<h1>Repositório:</h1>
+<p>Você pode baixar a atual versão em formatos       <a href="http://github.com/glerm/navalha/zipball/master">zip</a> ou       <a href="http://github.com/glerm/navalha/tarball/master">tar</a>.</p>
+<p>Vocẽ também pode clonar este projeto como um repositório <a href="http://git-scm.com">Git</a> rodando:</p>
+<pre>$ git clone git://github.com/glerm/navalha</pre>
+<p>&nbsp;</p>
