@@ -1,4 +1,4 @@
-Navalha - objeto [nvl]  versão 1.0
+Navalha - objeto [nvl]  versão 1.0-branch_estudos
 -----------------------------------------------------
 
 O objeto nvl cria instâncias de um sequenciador de fatias (slices) de .wav que podem ser editadas e salvas na própria interface gráfica deste objeto.
