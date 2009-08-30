@@ -22,7 +22,7 @@
 #X text 55 648 voce pode conectar outros aqui;
 #X text 56 660 basta criar o objeto [nvl] logo abaixo;
 #X text 445 334 nota atual (pitch);
-#X obj 914 84 cnv 15 330 500 empty empty empty 20 12 0 14 -233017 -66577
+#X obj 914 84 cnv 15 330 500 empty empty empty 20 12 0 14 -262122 -66577
 0;
 #X text 918 187 que permite que estas fatias sejam recarregadas;
 #X text 918 204 na exata posicao que foram salvas - arquivos .nvl.
@@ -41,7 +41,7 @@
 0;
 #X obj 162 358 bng 50 250 50 0 empty empty -->abrir 50 25 0 30 -164101
 -1 -86853;
-#N canvas 725 485 367 169 pitchbpmvol-help 0;
+#N canvas 731 513 367 169 pitchbpmvol-help 0;
 #X obj -122 21 cnv 15 360 130 empty empty empty 20 12 0 14 -233017
 -66577 0;
 #X text -117 42 a) Outlet que mostra a nota (pitch) atual.;
@@ -60,7 +60,7 @@ semitom \,;
 0;
 #X obj 715 25 bng 50 250 50 0 empty empty -->abrir 50 25 0 30 -164101
 -1 -86853;
-#N canvas 472 521 383 218 savepreset-help 0;
+#N canvas 490 521 383 218 savepreset-help 0;
 #X obj -132 5 cnv 15 360 200 empty empty empty 20 12 0 14 -233017 -66577
 0;
 #X text -128 13 ~) Saidas direita e esquerda.;
@@ -87,7 +87,7 @@ o nome;
 0;
 #X obj 274 7 bng 50 250 50 0 empty empty -->abrir 50 25 0 30 -164101
 -1 -86853;
-#N canvas 534 248 390 491 pattern-help 0;
+#N canvas 558 248 390 491 pattern-help 0;
 #X obj -135 9 cnv 15 360 470 empty empty empty 20 12 0 14 -233017 -66577
 0;
 #X text -132 22 a) Outlet de saida do sincronismo master-slave.;
@@ -133,7 +133,7 @@ mais;
 0;
 #X obj 691 339 bng 50 250 50 0 empty empty -->abrir 50 25 0 30 -164101
 -1 -86853;
-#N canvas 108 529 411 206 slices-help 0;
+#N canvas 120 533 411 206 slices-help 0;
 #X obj -111 7 cnv 15 400 180 empty empty empty 20 12 0 14 -233017 -66577
 0;
 #X text -106 21 a) Slider para edicao dos trechos (final);
@@ -165,7 +165,7 @@ a 15;
 -164101 -1 -86853;
 #X text -123 348 <-- aprenda os atalhos de;
 #X text -84 360 teclado!;
-#N canvas 60 305 422 219 atalhos-help 0;
+#N canvas 72 361 422 219 atalhos-help 0;
 #X obj -108 14 cnv 15 400 180 empty empty empty 20 12 0 14 -233017
 -66577 0;
 #X text -86 42 Utilizar os atalhos "qwertyuiop" para slices de 0 a
@@ -308,8 +308,8 @@ presets.;
 #X obj 12 368 nvl;
 #X msg 910 102 key \$1;
 #X msg 916 145 seq \$1;
-#X text 1195 466 "keys".;
 #X text 918 171 Estabelece tambem um arquivo padrao de metadados;
+#X text 1195 466 "key".;
 #X connect 4 0 82 0;
 #X connect 6 0 8 0;
 #X connect 6 1 7 0;

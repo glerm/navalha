@@ -1,6 +1,86 @@
-aguarde instruções :)
+Navalha - objeto [nvl]  versão 1.0
+-----------------------------------------------------
 
-duvidas - organismo@gmail.com
+O objeto nvl cria instâncias de um sequenciador de fatias (slices) de .wav que podem ser editadas e salvas na própria interface gráfica deste objeto.
+
+Estabelece também um arquivo padrão de metadados que permite que estas fatias sejam recarregadas na exata posição de onde foram salvas anteriormente - o arquivo .nvl.
+
+Estas fatias podem ser tocadas de maneira não-linear modificando padrões (patterns) de um sequenciador embutido que toca numa velocidade determinada em batidas por minuto (podem ser subdivididas dentro desta mesma batida) a atual fatia numa sequencia determinada por este "pattern".
+
+Os objetos [nvl] podem ser conectados em cascata, pelos seus primeiros inlets e outlets - determindo assim um master da conexão mais acima que pode sincronizar os sequenciadores de patterns - determinando um "master sequencer" que irá controlar os demais "slaves" nvl.
+
+Estes pattern também podem ser salvos dentro do arquivo .nvl criando assim uma possével navegação de clichês (ou "riffs") que podem ser recuperados e repetidos durante uma performance.
+
+Os controles de edição da performance já estão todos mapeados para controlesvia teclado do seu computador. Se você necessita desligar esta função num objeto nvl, basta desligar a função "key" que fica no canto inferior esquerdo. Obviamente se duas instâncias nvl estiverem com "key" ligado, ambas serão controladas simultaneamente pelo seu teclado.
+
+O painel esta descrito nas figuras contidas na pasta imgs ou no arquivo nvl-help.pd:
+
+Sequencer
+
+a) Outlet de saída do sincronismo master-slave. Conduz o cursor do sequencer e o bpm atual.
+b) Outlet que mostra a posição atual do cursor.
+c) Sequencia de slices que será executada durante a passagem do cursor master.
+d) Zera todo o pattern de slices.
+e) Escolhe um número limite de slices que será randomizado e cria uma sequência de números randômicos para um pattern.
+f) Pattern de uma sequencia padrão para frente e para trás.
+g) Carrega 10 patterns diferentes que estão salvos na matriz buffer da memoria. Estes patterns são carregados no arquivo .nvl ou podem ser salvos com o procedimento descrito abaixo no item "h".
+h) Botão store (ou atalho shift+s) serve para atualizar no buffer de memória ram (não salva em disco) os atuais presets dos slices e patterns. Para salvar em disco, voce precisa dar um nome de arquivo na janela save_preset do canto inferior direito.
+i) Number box que define o número de células que o cursor vai correr. Isto torna possível fazer uma sequẽncia com tempos ímpares ou diferentes de 8 batidas por compasso.
+j) Liga/Desliga os atalhos do controle de teclado.
+k) Liga/desliga sequencia master. É possível tocar mais de um master, mas obviamente não estarão imediatamente sincronizados.
+j) Cursor do sequenciador, dispara fatia atual.
+
+Pitch-Bpm-Volume
+
+a) Outlet que mostra a nota (pitch) atual (numa escala númerica cromática com 12 notas para cada sequência de dó a dó - contando todos os semitons).
+b) Semitom relativo ao tom original da música, em execução naquele instante.
+c) Volume geral deste objeto [nvl] - o pequeno gira os dois juntos em stereo.
+d) Muda tempo do Sequencer em batidas por minutos. Determina o numero de subdivisões por compasso.
+e) Tom predominante atual, aplicada ou não uma variação de tonalidade. Os botões logo acima podem modificar esta tonalidade por semitom. Ou pelas teclas "zxcvbnm,."
 
 
-;;;
+Save Preset
+~) Saídas de áudio esquerda e direita.
+a) Abre um arquivo wav para editas as fatias (slices).
+b) Hack-me: atalho para abrir os códigos.
+c) Entrada do nome de arquivo a ser salvo. Escreva o nome sem a extensão .nvl e aperte enter. Os patterns salvos no último store (shift+s) serão salvos no arquivo
+d) Nome do .nvl atualmente em execução.
+e) Abre um .nvl da pasta.
+
+*PS: Sempre utilize as pastas "samples" e "presets". Se for utilizar .nvl e .wavs de sua máquina de outras pastas. Não utilize samplers muito longos e de preferência recorte anteriormente o trecho que você quer utilizar, para não sobrecarregar o buffer. Este é um software de performance em tempo real, e não uma suíte de edição de áudio - para isso você tem softwares como audacity e ardour.
+
+Slices
+
+a) Sliders para seleção dos trechos. Acima ínicio e abaixo o final. Quando editando utilizar os atalhos "qwertyuiop" para selecionar os trechos de 0 até 7, e os atalhos "asdfghjkl" para 8 a 15.
+b) Esta tabela carrega o .wav que será executado e/ou fatiado. Utilize a barra de espaço para tocar o trecho todo.
+c) Fatia ("slice") da seleção carregada pelo arquivo .nvl ou atualmente em buffer de memória ram. Quando modificar o trecho de um slice não esqueça de atualizar no buffer de memória ram com o atalho shift+s ou o botão Store. Utilize a entrada "save_preset" para salvar o arquivo em disco.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
