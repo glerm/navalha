@@ -3,7 +3,7 @@ Navalha - nvl object version 1.0
 
 Instructions:
 Run in current directory
-#pd START.pd
+#pd color_set.pd START.pd
 
 
 Software as artwork - Coding craftsmanship
@@ -31,7 +31,7 @@ The pattern navigation is a way to create a sequence with new “riffs” from t
 All the controls are already mapped in computer keyboard. Of course that if you run more than one instance of nvl you have to choose which one will be controlled by the computer keyboard, so turn off the others with the “key” toggle.
 [nvl] Graphic interface and the main inlets and outlets
 
-Sequencer
+Sequencer (imgs/pattern_sequencer.gif)
 ---------
 
 a) Outlet for master-slave sync. It carries the sequencer cursor and the actual bpm.
@@ -57,7 +57,10 @@ j) On/Off keyboard shortcuts.
 k) k) On/Off master sequencer. It is possible to play than one master, but obviously they won’t be at sync.
 
 j) Sequencer cursor- trigger the actual slice.
-Pitch-Bpm-Volume
+
+
+Pitch-Bpm-Volume (imgs/bpm_pitch_vol.gif)
+----------------
 
 a) a) Outlet that shows the actual (pitch) note.
 
@@ -69,7 +72,7 @@ d) Change the sequencer tempo BPM.
 
 e) Detected pitch. The radiobutton above shift the pitch. Or with the computer keys “zxcvbnm,.”
 
-Save Preset
+Save Preset (imgs/save_preset.gif)
 -----------
 
 ~) Left and Right dsp outlets.
@@ -87,7 +90,7 @@ e) Open an .nvl at the default folder.
 *PS: Always use the folders “samples” e “presets”. If you nedd .nvl and wavs from other places - copy
 them.
 
-Slices
+Slices (imgs/slices.gif)
 ------
 
 a) Sliders for the slice edition: up slider for beggining and down slider for ending.Use the shotcuts “qwertyuiop” for slices 0 to 7. Use the shotcuts “asdfghjkl” for slices 8 to 15.
@@ -134,9 +137,9 @@ Use the space bar to play the complete sampler.
 Use shift+s to store modifications in a memory buffer.
 
 After that if you want to save a file in harddisk write the name at “save preset” and press enter.
+
 Repository:
+---------------
 
-You can download a packed version of the development folder at zip or tar formats.
-
-You can also clone the Git repository with:
+You can also clone and follow the Git repository with:
 $ git clone git://github.com/glerm/navalha
