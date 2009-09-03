@@ -1,4 +1,4 @@
-pattern ;
+pattern presets/patterns/bulgar.ptn;
 filename samples/bulgar.wav;
 end 0 0.128463;
 end 1 0.304786;
