@@ -1,7 +1,7 @@
 #N canvas 6 81 1268 658 10;
 #X declare -lib iemmatrix;
 #X declare -lib iem_tab;
-#X obj 265 17 hsl 50 10 0 1 0 0 \$0-end \$0-end-r empty -2 -8 0 10
+#X obj 317 423 hsl 50 10 0 1 0 0 \$0-end \$0-end-r empty -2 -8 0 10
 -182874 -1 -1 0 1;
 #X obj 104 280 cnv 15 797 97 empty \$0-playercnv empty 20 12 0 30 -147717
 -1 0;
@@ -12,21 +12,21 @@
 #X obj 147 282 cnv 15 500 30 empty \$0-cnvbg empty 0 25 1 40 -82700
 -261506 0;
 #X obj 219 326 nbx 2 15 -1e+37 1e+37 0 0 \$0-seqC3-S \$0-seqC3-R empty
-0 -8 0 15 -33289 -203904 -1 1 256;
+0 -8 0 15 -33289 -203904 -1 5 256;
 #X obj 145 325 nbx 2 15 -1e+37 1e+37 0 0 \$0-seqC1-S \$0-seqC1-R empty
 0 -8 0 15 -33289 -203904 -1 2 256;
 #X obj 182 326 nbx 2 15 -1e+37 1e+37 0 0 \$0-seqC2-S \$0-seqC2-R empty
-0 -8 0 15 -33289 -203904 -1 6 256;
-#X obj 107 325 nbx 2 15 -1e+37 1e+37 0 0 \$0-seqC0-S \$0-seqC0-R empty
-0 -8 0 15 -16662 -203904 -1 6 256;
-#X obj 367 326 nbx 2 15 -1e+37 1e+37 0 0 \$0-seqC7-S \$0-seqC7-R empty
-0 -8 0 15 -33289 -203904 -1 5 256;
-#X obj 293 326 nbx 2 15 -1e+37 1e+37 0 0 \$0-seqC5-S \$0-seqC5-R empty
 0 -8 0 15 -33289 -203904 -1 1 256;
+#X obj 107 325 nbx 2 15 -1e+37 1e+37 0 0 \$0-seqC0-S \$0-seqC0-R empty
+0 -8 0 15 -16662 -203904 -1 0 256;
+#X obj 367 326 nbx 2 15 -1e+37 1e+37 0 0 \$0-seqC7-S \$0-seqC7-R empty
+0 -8 0 15 -33289 -203904 -1 7 256;
+#X obj 293 326 nbx 2 15 -1e+37 1e+37 0 0 \$0-seqC5-S \$0-seqC5-R empty
+0 -8 0 15 -33289 -203904 -1 2 256;
 #X obj 330 326 nbx 2 15 -1e+37 1e+37 0 0 \$0-seqC6-S \$0-seqC6-R empty
-0 -8 0 15 -33289 -203904 -1 6 256;
+0 -8 0 15 -33289 -203904 -1 7 256;
 #X obj 256 326 nbx 2 15 -1e+37 1e+37 0 0 \$0-seqC4-S \$0-seqC4-R empty
-0 -8 0 15 -16662 -203904 -1 2 256;
+0 -8 0 15 -16662 -203904 -1 3 256;
 #X obj 107 282 tgl 40 1 \$0-seqtoggle-S \$0-seqtoggle-R off 0 10 1
 12 -2635 -21579 -262144 0 1;
 #X obj 820 365 cnv 12 80 12 empty empty hack-me: 10 5 1 10 -33289 -262144
@@ -46,7 +46,7 @@
 0;
 #X obj 633 356 nbx 3 20 -1e+37 1e+37 0 1 \$0-slicepitch-S \$0-slicepitch-R
 empty 0 -8 0 18 -139909 -261234 -1 0 256;
-#X obj 102 102 cnv 15 200 15 empty \$0-presetcanvas bulgar.nvl 0 7
+#X obj 102 102 cnv 15 200 15 empty \$0-presetcanvas espelho.nvl 0 7
 0 8 -103384 -262144 0;
 #X obj 136 169 hradio 13 1 1 4 \$0-tmode-S \$0-tmode-R /8 10 -8 0 10
 -86277 -260097 -262144 2;
@@ -1662,12 +1662,11 @@ empty 0 -8 0 15 -94247 -260032 -260480 8 256;
 slice vol mono2x normalize;
 #X obj 984 212 table \$0-R;
 #X obj 982 186 table \$0-L;
-#X obj 265 6 hsl 50 10 0 1 0 0 \$0-start \$0-start-r empty -2 -8 0
-10 -182874 -1 -1 0 1;
+#X obj 298 406 hsl 50 10 0 1 0 0 \$0-start \$0-start-r empty -2 -8
+0 10 -182874 -1 -1 0 1;
 #X obj 256 158 hradio 8 1 0 8 \$0-seqcursor-S \$0-seqcursor-R empty
 0 -8 0 10 -228856 -58253 -1 0;
 #X obj 404 236 s \$0-presetcanvas;
-#X obj 705 130 color.rgbset;
 #X obj 588 148 * 255;
 #X obj 519 82 * -65536;
 #X floatatom 596 177 10 0 0 0 - - -;
@@ -1676,6 +1675,9 @@ slice vol mono2x normalize;
 #X obj 371 163 * -255;
 #X msg 372 207 color \$1 0 0;
 #X obj 438 102 t b;
+#X obj 303 467 pack f f f;
+#X obj 284 436 t b;
+#X connect 0 0 139 2;
 #X connect 13 0 70 1;
 #X connect 13 0 96 0;
 #X connect 18 0 44 0;
@@ -1686,7 +1688,7 @@ slice vol mono2x normalize;
 #X connect 44 0 42 0;
 #X connect 45 0 64 0;
 #X connect 46 0 70 0;
-#X connect 46 0 65 0;
+#X connect 46 0 139 0;
 #X connect 47 0 53 0;
 #X connect 47 1 54 0;
 #X connect 49 0 51 0;
@@ -1696,7 +1698,7 @@ slice vol mono2x normalize;
 #X connect 60 0 95 0;
 #X connect 62 0 125 0;
 #X connect 63 0 114 0;
-#X connect 63 0 139 0;
+#X connect 63 0 138 0;
 #X connect 66 0 22 0;
 #X connect 67 0 68 0;
 #X connect 68 0 33 0;
@@ -1737,10 +1739,14 @@ slice vol mono2x normalize;
 #X connect 125 9 113 0;
 #X connect 125 10 123 0;
 #X connect 125 11 124 0;
-#X connect 132 0 134 0;
-#X connect 135 0 132 0;
+#X connect 128 0 140 0;
+#X connect 128 0 139 1;
+#X connect 131 0 133 0;
+#X connect 134 0 131 0;
+#X connect 135 0 136 0;
 #X connect 136 0 137 0;
-#X connect 137 0 138 0;
-#X connect 138 0 130 0;
-#X connect 139 0 136 0;
+#X connect 137 0 130 0;
+#X connect 138 0 135 0;
+#X connect 139 0 65 0;
+#X connect 140 0 139 0;
 #X coords 0 -1 1 1 204 19 2 100 100;
