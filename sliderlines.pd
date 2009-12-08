@@ -7,13 +7,13 @@
 0 1;
 #X msg 133 -169 vol \$1;
 #X obj 136 -189 hsl 30 15 0 1 0 0 empty empty empty -2 -8 0 10 -260097
--257985 -1 1500 1;
+-257985 -1 2200 1;
 #X floatatom 98 -175 5 0 0 0 - - -;
 #X floatatom 209 -176 5 0 7 0 - - -;
 #X msg 210 -158 slice \$1;
 #X msg 357 -110 key \$1;
 #X obj 483 -147 tgl 20 0 empty empty empty 17 7 0 10 -262144 -13381
--1 0 1;
+-1 1 1;
 #X msg 483 -125 seq \$1;
 #X floatatom 440 -94 5 0 7 0 - - -;
 #X msg 438 -70 slice \$1;
@@ -49,6 +49,9 @@
 #X floatatom 380 13 5 0 0 0 - - -;
 #X obj 513 -87 key;
 #X obj 509 -68 % 32;
+#X msg 331 131 random \$1;
+#X msg 348 94 24;
+#X msg 382 63 set \$1;
 #X connect 0 0 1 0;
 #X connect 1 0 32 1;
 #X connect 2 0 8 0;
@@ -68,6 +71,7 @@
 #X connect 16 0 15 0;
 #X connect 17 0 32 1;
 #X connect 18 0 17 0;
+#X connect 18 0 47 0;
 #X connect 19 0 33 0;
 #X connect 20 0 21 0;
 #X connect 21 0 16 0;
@@ -92,9 +96,12 @@
 #X connect 36 0 37 0;
 #X connect 37 0 30 0;
 #X connect 38 0 40 0;
+#X connect 38 0 46 0;
 #X connect 39 0 38 0;
-#X connect 40 0 0 0;
 #X connect 41 0 32 1;
 #X connect 42 0 41 0;
 #X connect 43 0 44 0;
 #X connect 44 0 11 0;
+#X connect 45 0 32 1;
+#X connect 46 0 45 0;
+#X connect 47 0 46 0;

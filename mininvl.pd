@@ -2,28 +2,28 @@
 #X declare -lib iemmatrix;
 #X declare -lib iem_tab;
 #X obj 290 421 hsl 50 10 0 1 0 0 \$0-end \$0-end-r empty -2 -8 0 10
--182874 -1 -1 1493 1;
+-182874 -1 -1 1837 1;
 #X obj 195 102 nbx 2 12 -1e+37 1e+37 0 0 \$0-seqC3-S \$0-seqC3-R empty
-0 -8 0 12 -33289 -203904 -1 3 256;
+0 -8 0 12 -33289 -203904 -1 13 256;
 #X obj 133 102 nbx 2 12 -1e+37 1e+37 0 0 \$0-seqC1-S \$0-seqC1-R empty
-0 -8 0 12 -33289 -203904 -1 5 256;
+0 -8 0 12 -33289 -203904 -1 7 256;
 #X obj 164 102 nbx 2 12 -1e+37 1e+37 0 0 \$0-seqC2-S \$0-seqC2-R empty
-0 -8 0 12 -33289 -203904 -1 6 256;
+0 -8 0 12 -33289 -203904 -1 28 256;
 #X obj 102 102 nbx 2 12 -1e+37 1e+37 0 0 \$0-seqC0-S \$0-seqC0-R empty
-0 -8 0 12 -16662 -203904 -1 1 256;
+0 -8 0 12 -16662 -203904 -1 23 256;
 #X obj 319 102 nbx 2 12 -1e+37 1e+37 0 0 \$0-seqC7-S \$0-seqC7-R empty
-0 -8 0 12 -33289 -203904 -1 3 256;
+0 -8 0 12 -33289 -203904 -1 11 256;
 #X obj 257 102 nbx 2 12 -1e+37 1e+37 0 0 \$0-seqC5-S \$0-seqC5-R empty
-0 -8 0 12 -33289 -203904 -1 5 256;
+0 -8 0 12 -33289 -203904 -1 6 256;
 #X obj 288 102 nbx 2 12 -1e+37 1e+37 0 0 \$0-seqC6-S \$0-seqC6-R empty
-0 -8 0 12 -33289 -203904 -1 1 256;
+0 -8 0 12 -33289 -203904 -1 19 256;
 #X obj 226 102 nbx 2 12 -1e+37 1e+37 0 0 \$0-seqC4-S \$0-seqC4-R empty
-0 -8 0 12 -16662 -203904 -1 6 256;
+0 -8 0 12 -16662 -203904 -1 3 256;
 #X obj 1167 2 bng 15 250 50 0 \$0-configure empty empty 17 7 0 10 -99865
 -203904 -1;
 #X obj 1104 23 r \$0-configure;
-#X obj 102 117 cnv 15 245 15 empty \$0-presetcanvas bulgar.nvl 0 7
-0 8 -41013 -262144 0;
+#X obj 102 117 cnv 15 245 15 empty \$0-presetcanvas tonyriff.nvl 0
+7 0 8 -73396 -262144 0;
 #X obj 1188 -32 bng 15 250 50 0 \$0-open empty empty 17 7 0 10 -99865
 -203904 -1;
 #X obj 1106 -30 cnv 12 80 12 empty empty edit_wav-file: 0 7 1 11 -33289
@@ -434,7 +434,7 @@
 #X connect 60 0 59 4;
 #X connect 61 0 57 0;
 #X restore 84 375 pd \$0-sequencer_guts;
-#N canvas 0 326 1268 658 \$0-play_segments 0;
+#N canvas 0 142 1268 658 \$0-play_segments 0;
 #X obj 627 391 soundfiler;
 #X obj 139 26 openpanel;
 #X obj 627 344 pack s \$0;
@@ -829,6 +829,7 @@
 #X obj 482 329 r \$0-vol;
 #X obj 375 392 *~ 0.5;
 #X obj 425 394 *~ 0.5;
+#X obj 234 34 r \$0-wavfile;
 #X connect 0 0 22 0;
 #X connect 1 0 87 0;
 #X connect 2 0 4 0;
@@ -910,6 +911,7 @@
 #X connect 93 0 95 1;
 #X connect 94 0 80 0;
 #X connect 95 0 81 0;
+#X connect 96 0 89 0;
 #X restore 427 448 pd \$0-play_segments;
 #N canvas 6 53 1268 686 \$0-preset_guts 0;
 #X obj 550 604 s \$0-restore;
@@ -939,7 +941,7 @@
 #X obj 108 277 tabread \$0-slices-end;
 #X obj 94 85 r \$0-savetomsg;
 #X text 87 65 formata a mensagem do preset;
-#X msg 109 145 4;
+#X msg 109 145 32;
 #X obj 122 512 outlet;
 #X msg 267 270 filename \$1;
 #X obj 5 247 f;
@@ -949,7 +951,7 @@
 #X obj 5 194 t f b;
 #X obj 5 270 t f f;
 #X obj 38 351 pack 0 0;
-#X msg 6 173 4;
+#X msg 6 173 32;
 #X obj 5 305 tabread \$0-slices-start;
 #X msg -8 406 start \$2 \$1;
 #X msg 111 379 end \$2 \$1;
@@ -1338,7 +1340,7 @@ alike;
 #X obj 95 -27 inlet;
 #X obj 84 473 outlet;
 #X obj 548 -96 inlet;
-#X obj 529 -3 tosymbol;
+#X obj 533 -7 tosymbol;
 #X obj 349 471 outlet;
 #X obj 304 471 outlet;
 #X obj 84 446 pack f f f f;
@@ -1553,21 +1555,21 @@ alike;
 #X obj 670 149 s \$0-ntempo-R;
 #X obj 677 99 unpack f f;
 #X obj 750 80 t b f;
-#X obj 912 101 s \$0-seqtoggle-R;
+#X obj 956 136 s \$0-seqtoggle-R;
 #X obj 528 18 makefilename presets/%s;
-#X obj 913 78 s \$0-sliceinlet;
+#X obj 957 113 s \$0-sliceinlet;
 #X text 651 -94 atalho para entrada de controles externos;
 #X text 1102 -15 abertura das janelas;
 #X text 1108 -1 "hack-me";
 #X text 426 429 engine dsp~ segmentos;
-#X obj 917 28 s \$0-mono2stereo;
-#X obj 920 4 s \$0-normalize;
+#X obj 961 63 s \$0-mono2stereo;
+#X obj 964 39 s \$0-normalize;
 #X obj 203 40 table \$0-R;
 #X obj 203 20 table \$0-L;
 #X obj 290 410 hsl 50 10 0 1 0 0 \$0-start \$0-start-r empty -2 -8
-0 10 -182874 -1 -1 642 1;
+0 10 -182874 -1 -1 1684 1;
 #X obj 234 120 hradio 8 1 0 8 \$0-seqcursor-S \$0-seqcursor-R empty
-0 -8 0 10 -228856 -58253 -1 4;
+0 -8 0 10 -228856 -58253 -1 7;
 #X obj 520 167 s \$0-presetcanvas;
 #X obj 522 104 random 65536;
 #X obj 523 128 * -255;
@@ -1583,7 +1585,7 @@ empty 0 -8 0 8 -1 -262144 -1 120 256;
 #X obj 780 112 s \$0-randomfactor;
 #X obj 779 135 s \$0-random;
 #X obj 775 172 s \$0-div;
-#X obj 915 54 s \$0-vol;
+#X obj 959 89 s \$0-vol;
 #X obj 402 20 s \$0-pitchdisplay-S;
 #X obj 794 82 s \$0-keyctrl-S;
 #X obj 378 154 s \$0-tmode-S;
@@ -1592,11 +1594,20 @@ empty 0 -8 0 8 -1 -262144 -1 120 256;
 #X obj 394 50 loadbang;
 #X obj 426 95 s \$0-div;
 #X msg 426 70 8;
-#X obj 548 -76 route pitch preset pattern tempo div random key seq
-slice vol mono2x normalize simetria;
-#X obj 924 -21 s \$0-simetria;
+#X obj 968 14 s \$0-simetria;
 #X obj 673 174 s \$0-tmode-R;
 #X obj 363 -21 r \$0-tmode-R;
+#X obj 971 -7 s \$0-wavfile;
+#X obj 548 -76 route pitch preset pattern tempo div random key seq
+slice vol mono2x normalize simetria wav;
+#X obj 950 -36 tosymbol;
+#X symbolatom 956 -75 20 0 0 0 - - -;
+#X obj 870 365 s \$0-presetcanvas;
+#X obj 872 302 random 65536;
+#X obj 873 326 * -255;
+#X msg 867 345 color \$1 0 0;
+#X obj 951 230 t b s;
+#X msg 999 276 label \$1;
 #X connect 0 0 78 2;
 #X connect 10 0 16 0;
 #X connect 16 0 14 0;
@@ -1609,7 +1620,7 @@ slice vol mono2x normalize simetria;
 #X connect 22 0 35 0;
 #X connect 23 0 24 0;
 #X connect 27 0 54 0;
-#X connect 29 0 95 0;
+#X connect 29 0 99 0;
 #X connect 30 0 61 0;
 #X connect 30 0 77 0;
 #X connect 33 0 28 0;
@@ -1630,7 +1641,7 @@ slice vol mono2x normalize simetria;
 #X connect 55 0 54 1;
 #X connect 56 0 87 0;
 #X connect 58 0 57 0;
-#X connect 58 1 97 0;
+#X connect 58 1 96 0;
 #X connect 59 0 84 0;
 #X connect 59 1 83 0;
 #X connect 61 0 20 0;
@@ -1652,18 +1663,28 @@ slice vol mono2x normalize simetria;
 #X connect 92 0 91 0;
 #X connect 92 0 94 0;
 #X connect 94 0 93 0;
-#X connect 95 0 56 0;
-#X connect 95 1 30 0;
-#X connect 95 2 82 0;
-#X connect 95 3 58 0;
-#X connect 95 4 85 0;
-#X connect 95 5 59 0;
-#X connect 95 6 88 0;
-#X connect 95 7 60 0;
-#X connect 95 8 62 0;
-#X connect 95 9 86 0;
-#X connect 95 10 67 0;
-#X connect 95 11 68 0;
-#X connect 95 12 96 0;
-#X connect 98 0 90 0;
+#X connect 97 0 90 0;
+#X connect 99 0 56 0;
+#X connect 99 1 30 0;
+#X connect 99 2 82 0;
+#X connect 99 3 58 0;
+#X connect 99 4 85 0;
+#X connect 99 5 59 0;
+#X connect 99 6 88 0;
+#X connect 99 7 60 0;
+#X connect 99 8 62 0;
+#X connect 99 9 86 0;
+#X connect 99 10 67 0;
+#X connect 99 11 68 0;
+#X connect 99 12 95 0;
+#X connect 99 13 100 0;
+#X connect 100 0 98 0;
+#X connect 100 0 101 0;
+#X connect 100 0 106 0;
+#X connect 103 0 104 0;
+#X connect 104 0 105 0;
+#X connect 105 0 102 0;
+#X connect 106 0 103 0;
+#X connect 106 1 107 0;
+#X connect 107 0 102 0;
 #X coords 0 -1 1 1 250 35 2 100 100;
