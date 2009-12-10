@@ -87,7 +87,7 @@ o nome;
 0;
 #X obj 274 7 bng 50 250 50 0 empty empty -->abrir 50 25 0 30 -164101
 -1 -86853;
-#N canvas 558 248 390 491 pattern-help 0;
+#N canvas 795 220 390 491 pattern-help 0;
 #X obj -135 9 cnv 15 360 470 empty empty empty 20 12 0 14 -233017 -66577
 0;
 #X text -132 22 a) Outlet de saida do sincronismo master-slave.;
@@ -95,11 +95,8 @@ o nome;
 #X text -132 54 b) Outlet que mostra posicao atual do cursor.;
 #X text -132 77 c) Sequencia de slices que sera executada durante;
 #X text -113 91 a passagem do cursor master.;
-#X text -132 112 d) Zera todo o pattern de slices.;
 #X text -115 150 e gera um pattern randomico.;
 #X text -132 136 e) Escolhe o numero de slices que vao ser randomizados
-;
-#X text -133 172 f) Pattern da sequencia comum pra frente e pra tras.
 ;
 #X text -132 193 g) Carrega 10 patterns diferentes que estao salvos
 ;
@@ -126,9 +123,11 @@ cursor;
 #X text -132 405 k) Liga/Desliga sequencer master. E possivel tocar
 mais;
 #X text -132 439 j) Cursor do sequenciador - dispara slice atual.;
+#X text -132 112 d) Gera um numero de fatias simetricas.;
+#X text -133 172 f) Pattern da sequencia comum pra frente e pra tras
+e zero.;
 #X restore 480 51 pd pattern-help;
 #X msg 274 127 \; pd-pattern-help vis 1;
-#X obj 279 202 image imgs/pattern_sequencer.gif;
 #X obj 691 339 cnv 15 300 80 empty empty empty 20 12 0 14 -204767 -66577
 0;
 #X obj 691 339 bng 50 250 50 0 empty empty -->abrir 50 25 0 30 -164101
@@ -189,12 +188,13 @@ presets.;
 #X msg 953 640 \; pd-detalhes-help vis 1;
 #X obj 953 620 r \$0-detalhes;
 #X obj -110 98 image imgs/NAVA100.gif;
+#X obj 279 202 image imgs/pattern_sequencer.gif;
 #X connect 1 0 3 0;
 #X connect 6 0 8 0;
 #X connect 12 0 14 0;
-#X connect 17 0 19 0;
-#X connect 32 0 31 0;
-#X connect 34 0 33 0;
+#X connect 16 0 18 0;
+#X connect 31 0 30 0;
+#X connect 33 0 32 0;
 #X restore 1136 651 pd detalhes-help;
 #X text 918 257 que toca numa velocidade determinada em batidas/minuto
 ;
@@ -293,9 +293,6 @@ presets.;
 #X floatatom 826 362 5 0 0 0 - - -;
 #X obj 1019 23 cnv 15 100 60 empty empty [nvl] 20 12 0 50 -203904 -66577
 0;
-#X text 1051 63 Navalha abstraction v.1.0;
-#X text 449 23 Este inlet facilita a entrada de modificadores dos controles
-;
 #X text 481 34 permitindo facil conexao com outros patches e hardware.
 ;
 #X obj 12 24 cnv 15 100 25 empty empty empty 380 20 0 14 -232576 -45076
@@ -310,11 +307,17 @@ presets.;
 #X text 918 171 Estabelece tambem um arquivo padrao de metadados;
 #X text 1195 466 "key".;
 #X obj 1000 70 image imgs/NAVA100.gif;
-#X obj 12 368 nvl;
 #X msg 825 652 mono2x bang;
 #X msg 820 392 normalize bang;
-#X connect 4 0 81 0;
-#X connect 4 0 91 0;
+#X obj 12 368 nvl;
+#X msg 816 1 simetria \$1;
+#X floatatom 781 1 5 0 0 0 - - -;
+#X text 1051 63 Navalha abstraction v.1.1;
+#X text 449 22 Este inlet facilita a entrada de modificadores dos controles
+;
+#X msg 662 1 wav shadebossa.wav;
+#X connect 4 0 79 0;
+#X connect 4 0 88 0;
 #X connect 6 0 8 0;
 #X connect 6 1 7 0;
 #X connect 6 2 5 0;
@@ -341,19 +344,22 @@ presets.;
 #X connect 66 0 64 1;
 #X connect 67 0 64 0;
 #X connect 68 0 64 1;
-#X connect 70 0 86 0;
-#X connect 71 0 85 0;
+#X connect 70 0 84 0;
+#X connect 71 0 83 0;
 #X connect 72 0 6 1;
 #X connect 73 0 72 0;
 #X connect 73 0 74 0;
-#X connect 81 0 90 1;
+#X connect 79 0 90 1;
+#X connect 80 0 6 1;
+#X connect 81 0 82 0;
 #X connect 82 0 6 1;
-#X connect 83 0 84 0;
+#X connect 83 0 6 1;
 #X connect 84 0 6 1;
-#X connect 85 0 6 1;
-#X connect 86 0 6 1;
+#X connect 88 0 90 1;
+#X connect 89 0 6 1;
 #X connect 90 0 14 0;
 #X connect 90 3 2 0;
 #X connect 90 4 3 0;
-#X connect 91 0 90 1;
-#X connect 92 0 6 1;
+#X connect 91 0 6 1;
+#X connect 92 0 91 0;
+#X connect 95 0 6 1;

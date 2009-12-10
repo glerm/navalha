@@ -1,4 +1,4 @@
-#N canvas 185 130 962 448 10;
+#N canvas 300 227 962 448 10;
 #X declare -lib iemmatrix;
 #X declare -lib iem_tab;
 #X obj 117 34 nvlvideo;
@@ -72,7 +72,7 @@
 #X text 47 -1 frame sync;
 #X obj 483 -245 + 1;
 #X obj 461 -266 hradio 20 1 0 8 empty empty randomize 0 -8 0 10 -262144
--1 -1 1;
+-1 -1 3;
 #X obj 461 -245 * 4;
 #X msg 523 -208 wav tonyriff.wav;
 #X msg 439 -27 pattern \$1;
@@ -80,6 +80,7 @@
 #X text 517 -55 or the equivalent .wav file;
 #X text 456 -231 you can also use .wav with random patterns;
 #X text 505 6 (the related .wav is considered;
+#X obj 644 -179 loadbang;
 #X connect 1 1 0 0;
 #X connect 1 3 2 0;
 #X connect 1 4 2 1;
@@ -105,3 +106,4 @@
 #X connect 38 0 0 1;
 #X connect 39 0 1 1;
 #X connect 40 0 39 0;
+#X connect 44 0 31 0;

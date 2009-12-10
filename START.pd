@@ -26,7 +26,7 @@
 #X text 918 204 in the exact position that were saved - .nvl files.
 ;
 #X text 918 227 Those slices can be played in a non-linear way;
-#N canvas 6 53 1268 686 detalhes-help 0;
+#N canvas 6 53 1268 686 detalhes-help 1;
 #X obj 161 355 cnv 15 300 80 empty empty empty 20 12 0 14 -204767 -66577
 0;
 #X obj 162 358 bng 50 250 50 0 empty empty -->open 50 25 0 30 -164101
@@ -86,11 +86,9 @@ them.;
 #X text -132 77 c) Slice sequence that will be executed during the
 cursor;
 #X text -113 91 passage. This is the actual "pattern".;
-#X text -132 112 d) Zero all the pattern cells.;
 #X text -132 136 e) Choose a slice number limit to randomize and generates
 ;
 #X text -115 150 a randomic pattern.;
-#X text -131 172 f) Pattern n+1 forward and n-1 backward.;
 #X text -132 193 g) Loads 10 different patterns saved in the pattern
 memory;
 #X text -113 207 buffer. Those patterns are loaded from the .nvl file
@@ -117,6 +115,9 @@ more;
 #X text -114 420 than one master \, but obviously they won't be at
 sync.;
 #X text -132 439 j) Sequencer cursor- trigger the actual slice.;
+#X text -132 112 d) Create a number of symmetric slices.;
+#X text -131 172 f) Pattern n+1 forward and n-1 backward and all zeros.
+;
 #X restore 504 72 pd pattern-help;
 #X msg 274 127 \; pd-pattern-help vis 1;
 #X obj 279 202 image imgs/pattern_sequencer.gif;
@@ -305,6 +306,9 @@ to disk.;
 #X msg 840 640 normalize bang;
 #X obj 823 440 t b b b;
 #X msg 824 619 preset breakcore.nvl;
+#X msg 822 4 simetria \$1;
+#X floatatom 787 4 5 0 0 0 - - -;
+#X msg 668 4 wav shadebossa.wav;
 #X connect 5 0 7 0;
 #X connect 5 1 6 0;
 #X connect 5 2 4 0;
@@ -348,3 +352,6 @@ to disk.;
 #X connect 90 1 89 0;
 #X connect 90 2 91 0;
 #X connect 91 0 43 1;
+#X connect 92 0 5 1;
+#X connect 93 0 92 0;
+#X connect 94 0 5 1;

@@ -1,0 +1,18 @@
+pattern presets/patterns/bossa.ptn;
+filename samples/shadebossa.wav;
+end 0 0.121222;
+end 1 0.239924;
+end 2 0.364924;
+end 3 0.488665;
+end 4 0.585957;
+end 5 0.695844;
+end 6 0.746537;
+end 7 0.881612;
+start 0 0;
+start 1 0.125;
+start 2 0.239924;
+start 3 0.363665;
+start 4 0.489924;
+start 5 0.575882;
+start 6 0.695844;
+start 7 0.751574;
