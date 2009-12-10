@@ -1,3 +1,4 @@
+pattern presets/patterns/breakcore.ptn;
 filename /home/glerm/navalha/samples/boobabreak.wav;
 end 0 0.124685;
 end 1 0.241814;

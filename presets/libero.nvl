@@ -1,0 +1,18 @@
+pattern presets/patterns/libero.ptn;
+filename samples/stallman.wav;
+end 0 0.0796599;
+end 1 0.25;
+end 2 0.375;
+end 3 0.5;
+end 4 0.625;
+end 5 0.75;
+end 6 0.875;
+end 7 1;
+start 0 0;
+start 1 0.125;
+start 2 0.25;
+start 3 0.375;
+start 4 0.5;
+start 5 0.625;
+start 6 0.75;
+start 7 0.875;

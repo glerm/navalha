@@ -1,0 +1,145 @@
+Navalha - nvl object version 1.0
+----------------------------------
+
+Instructions:
+Run in current directory
+#pd color_set.pd START.pd
+
+
+Software as artwork - Coding craftsmanship
+------------------------------------------
+
+This project is a study to estimulate an activity that the is the fuel for FLOSS (free libre open source software) creativity: to twist software as an artistic practice, as an way to express abstract and conceptual ideas so important as the music, visuals or anything - software as a voice, not just a medium or a support to things happening. Instead of an interface which says what “the user” wants to do, this model of development is pushing you to invent and think about this since the moment your language is passing through the first bytes.
+Choosing a language as Puredata, which have an extremely productive and creativity community is a way to assure that even with a very focused beginning of this project - slicing samples - this code will be easily hacked and turned in new ideas and happenings.
+
+Navalha is a project of abstractions, “patches”, softwares made with Puredata language that can connect other puredata “objects” to create more and more software with this. The first piece of this project is an object called [nvl]. For a complete version of puredata, I suggest you to begin with a distribuition called ‘pd-extended’, an easy to install package with lots of community libraries. You can download this from here.
+
+The graphic object - [nvl]
+--------------------------
+ 
+
+The nvl object create an independent instance (you could have various [nvl]s in the same patch) of a wavfile slicer, which is at the same time an interface to edit those slices or an interface to perform with them, live.
+
+This also creates a specific format for a textfile metadata, which can reaload the wavfile sample with a table os all positions of slices and also a sequence of patterns of eight slices for a non-linear playing. This file have an arbitrary extension “.nvl” but is a normal textfile.
+
+These slices can be played by a sequencer with an interactive BPM tempo, and the patterns can be modified in 10 differents sequences. You can also control this slices from outside or from computer keyboard, creating custom navigations of those wav parts. With second inlet you could easily hack all the object modifiers and create more complicated automations.
+
+The nvl objects can also be connected in chain, with a master sequencer passing tempo and the actual position of the cursor to the others.
+
+The pattern navigation is a way to create a sequence with new “riffs” from the old loop that would be saved in the metadata.
+
+All the controls are already mapped in computer keyboard. Of course that if you run more than one instance of nvl you have to choose which one will be controlled by the computer keyboard, so turn off the others with the “key” toggle.
+[nvl] Graphic interface and the main inlets and outlets
+
+Sequencer (imgs/pattern_sequencer.gif)
+---------
+
+a) Outlet for master-slave sync. It carries the sequencer cursor and the actual bpm.
+
+b) Outlet that shows the instant position of the cursor.
+
+c) Slice sequence that will be executed during the cursor passage. This is the actual “pattern”.
+
+d) Zero all the pattern cells.
+
+e) Choose a slice number limit to randomize and generates a randomic pattern.
+
+f) Pattern n+1 forward and n-1 backward.
+
+g) Loads 10 different patterns saved in the pattern memory buffer. Those patterns are loaded from the .nvl file or could be saved from new configurations at performance with a procedure described at the “h” item.
+
+h) The Store Button (or the shift+s shortcut) is for update state of presets and slices at memory buffer (it don’t save at disk!) window save_preset in the low-right side of interface. To save at this you have to fill a file name at the symbol save_preset and press enter.
+
+i) Number box that defines de number of cells of loop. This is for allow you to draw different kinds of bar measures.
+
+j) On/Off keyboard shortcuts.
+
+k) k) On/Off master sequencer. It is possible to play than one master, but obviously they won’t be at sync.
+
+j) Sequencer cursor- trigger the actual slice.
+
+
+Pitch-Bpm-Volume (imgs/bpm_pitch_vol.gif)
+----------------
+
+a) a) Outlet that shows the actual (pitch) note.
+
+b) b) Relative semitone from original sample pitch.
+
+c) General [nvl] volume - the small turns both.
+
+d) Change the sequencer tempo BPM.
+
+e) Detected pitch. The radiobutton above shift the pitch. Or with the computer keys “zxcvbnm,.”
+
+Save Preset (imgs/save_preset.gif)
+-----------
+
+~) Left and Right dsp outlets.
+
+a) Open an wav file to be sliced.
+
+b) Hack-me: coding shortcuts.
+
+c) Entry the filename to be saved. Write it without the .nvl extension and hit enter. The patterns and slices saved at the store (shift+s) procedure will be saved at harddisk.
+
+d) Name of .nvl at execution.
+
+e) Open an .nvl at the default folder.
+
+*PS: Always use the folders “samples” e “presets”. If you nedd .nvl and wavs from other places - copy
+them.
+
+Slices (imgs/slices.gif)
+------
+
+a) Sliders for the slice edition: up slider for beggining and down slider for ending.Use the shotcuts “qwertyuiop” for slices 0 to 7. Use the shotcuts “asdfghjkl” for slices 8 to 15.
+
+b) This table loads the wav to be executed.Use the spacebar to play all the sample.
+
+c) Slice loaded from the .nvl file or edited and stored. When modifing a slice use shift+s to store at buffer and the “save preset” symbol entry + enter to save to disk.
+The external controllers entry - second inlet
+
+Most of above contrlers can also be manipulated by the second inlet, using a message in the format “modifier $1 [$2]“. Exemple: “pitch $1″ , where $1 would be a number entry for pitch pitch.
+
+See at the picture down here ( and in the file START.pd) a list with all modifiers:
+
+1 ) slice (numeber of the slice)
+
+2 ) tempo (2 variables - bpm and bar divisions)
+
+3 ) preset (name of a .nvl file - it have to be at presets folder)
+
+4 ) pattern (number of the pattern at buffer from 1 to 10)
+
+5 ) key (toggle on/off computer keyboard control)
+
+6 ) seq (toggle on/off sequencer)
+
+7 ) vol (volume from 0 to 1)
+
+8 ) random (limit number for a random pattern pattern which generates 8 nubers andd fill it)
+
+Shortcuts
+---------
+
+The shortcuts can be turned on/off with toggle “key”.
+
+Use the shotcuts “qwertyuiop” for slices 0 to 7.
+
+Use the shotcuts “asdfghjkl” for slices 8 to 15.
+
+Use the shotcuts “1234567890″ for patterns 1 to 10.
+
+Use the shotcuts “zxcvbnm \, .” to change the pitch.
+
+Use the space bar to play the complete sampler.
+Use shift+s to store modifications in a memory buffer.
+
+After that if you want to save a file in harddisk write the name at “save preset” and press enter.
+
+Repository:
+---------------
+
+You can also clone and follow the Git repository with:
+$ git clone git://github.com/glerm/navalha
