@@ -40,11 +40,11 @@ b) Outlet that shows the instant position of the cursor.
 
 c) Slice sequence that will be executed during the cursor passage. This is the actual “pattern”.
 
-d) Zero all the pattern cells.
+d) Simmetry of slices.
 
 e) Choose a slice number limit to randomize and generates a randomic pattern.
 
-f) Pattern n+1 forward and n-1 backward.
+f) Pattern n+1 forward and n-1 backward and zeros.
 
 g) Loads 10 different patterns saved in the pattern memory buffer. Those patterns are loaded from the .nvl file or could be saved from new configurations at performance with a procedure described at the “h” item.
 

@@ -5,12 +5,12 @@
 #X declare -lib iem_tab;
 #X floatatom 236 -478 5 1 10 0 - - -;
 #X msg 235 -457 pattern \$1;
-#X obj 92 -491 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 83 -489 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X msg 575 -287 vol \$1;
 #X obj 578 -307 hsl 30 15 0 1 0 0 empty empty empty -2 -8 0 10 -260097
 -257985 -1 0 1;
-#X msg 92 -474 key \$1;
+#X msg 83 -471 key \$1;
 #X obj 672 -292 tgl 20 0 empty empty empty 17 7 0 10 -4034 -13381 -1
 0 1;
 #X msg 672 -270 seq \$1;
@@ -18,8 +18,8 @@
 #X obj 33 -292 mininvl;
 #X msg 198 -541 preset bulgar.nvl;
 #X msg 201 -521 preset oboe.nvl;
-#X msg 34 -519 pitch \$1;
-#X floatatom 30 -538 5 0 0 0 - - -;
+#X msg 17 -515 pitch \$1;
+#X floatatom 13 -534 5 0 0 0 - - -;
 #X msg 541 -467 simetria \$1;
 #X floatatom 541 -532 5 0 0 0 - - -;
 #X msg 784 -230 tempo 120 \$1;
@@ -30,11 +30,11 @@
 #X msg 858 -289 4;
 #X floatatom 858 -265 5 0 0 0 - - -;
 #X floatatom 263 -432 5 0 0 0 - - -;
-#X floatatom 32 -345 5 0 0 0 - - -;
-#X obj 32 -388 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
+#X floatatom 20 -338 5 0 0 0 - - -;
+#X obj 20 -381 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
 -1 -1 0;
-#X msg 32 -325 div \$1;
-#X obj 32 -366 + 1;
+#X msg 20 -318 div \$1;
+#X obj 20 -359 + 1;
 #X msg 627 -474 32;
 #X msg 627 -535 16;
 #X msg 628 -516 8;
@@ -79,55 +79,52 @@
 #X obj 33 21 spigot;
 #X obj 66 -1 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
-#X text 82 -3 turn on/off slave sync;
 #X obj 919 -508 cnv 15 330 220 empty empty empty 20 12 0 14 -159720
 -66577 0;
 #X obj 986 -551 cnv 15 100 60 empty empty [mininvl] 20 12 0 30 -191407
 -66577 0;
 #X obj 952 -489 image imgs/NAVA100.gif;
-#X text 975 -485 Mini navalha object [mininvl] is a navalha;
-#X text 984 -467 "player" with a minimalistic interface;
-#X text 984 -449 where you can have much more space to work;
-#X text 930 -429 fast and use less computer resources in graphics.
-;
-#X text 937 -411 It can loads the .nvl files \, sliced and saved in
-;
-#X text 927 -391 in the [nvl] inteface before or if you don't need
-;
-#X text 928 -373 to select slices more precisely and you just want
-to;
-#X text 929 -335 It's the more indicated interface to perform and;
-#X text 927 -317 connect signals with other patches.;
-#X text 296 -435 jump into selected slice;
-#X text 268 -482 select pattern saved in a .nvl file;
-#X text 787 -211 select tempo and its divisions;
 #X text 614 -308 volume;
-#X text 530 -555 random trigger with numers os slices you want in a
-pattern;
-#X text 92 -508 turn keyboard use;
-#X text 200 -558 select nvl files and patterns;
-#X text 700 -295 start sequencers;
-#X text 31 -407 sequencer divisions;
-#X text 29 -556 change default pitch;
 #X text 1004 -512 MiniNavalha players v.1.1;
 #X obj 93 -147 unpack f f f;
 #X floatatom 94 -121 5 0 0 0 - - -;
 #X floatatom 127 -83 5 0 0 0 - - -;
 #X floatatom 162 -44 5 0 0 0 - - -;
-#X text 127 -119 actual step of sequencer;
-#X text 162 -86 beggining of actual slice;
-#X text 198 -43 ending of actual slice;
 #X floatatom 393 -91 5 0 0 0 - - -;
-#X text 372 -73 actual pitch relative to default;
-#X text 371 -59 .wav pitch;
 #X msg 577 -333 normalize 1;
 #X msg 491 -374 wav sacrifice.wav;
 #X msg 492 -396 wav shadebossa.wav;
-#X text 487 -416 you could also just use wavs when using random patterns
+#X text 984 -449 onde voce pode ter mais espaco e agilidade;
+#X text 1018 -433 usando menos recursos computacionais.;
+#X text 979 -467 com interface minimalista para tocar ao vivo;
+#X text 928 -411 Ele carrega os arquivos .nvl previamente salvos;
+#X text 927 -391 com o objeto [nvl] para improviso ao vivo ou se voce
 ;
-#X text 928 -354 play with simetry of slices with simetria message.
+#X text 926 -356 com o modificador de simetria e sequencias randomicas.
 ;
-#X text 547 -448 choose the number of slicing simmetry;
+#X text 929 -335 E' a interface mais indicada para performances;
+#X text 927 -317 e para conectar sinais de outros patches.;
+#X text 513 -551 dispara sequencias randomicas com o numero de fatias.
+;
+#X text 547 -449 escolha a simetria de fatias.;
+#X text 487 -416 voce pode usar diretamente .wav se nao precisa usar
+presets.;
+#X text 200 -558 seleciona presets nvl;
+#X text 268 -482 seleciona pattern de sequencia .nvl;
+#X text 296 -435 pula para uma fatia;
+#X text 19 -400 divisoes do sequencer;
+#X text 700 -295 inicia sequencers;
+#X text 787 -211 seleciona o tempo e suas divisoes;
+#X text 127 -119 passo atual do sequenciador;
+#X text 162 -86 inicio da fatia atual;
+#X text 198 -43 final da fatia atual;
+#X text 82 -3 liga/desliga sync;
+#X text 12 -552 muda pitch padrao;
+#X text 83 -505 atalhos de teclado;
+#X text 372 -73 pitch atual relativo ao original;
+#X text 975 -485 Mini navalha [mininvl] e' um "player" navalha;
+#X text 928 -373 apenas quer brincar com simetrias de um arquivo .wav
+;
 #X connect 0 0 1 0;
 #X connect 1 0 9 1;
 #X connect 2 0 5 0;
@@ -138,8 +135,8 @@ pattern;
 #X connect 7 0 9 1;
 #X connect 8 0 9 1;
 #X connect 9 0 38 0;
-#X connect 9 1 64 0;
-#X connect 9 2 71 0;
+#X connect 9 1 45 0;
+#X connect 9 2 49 0;
 #X connect 9 3 34 0;
 #X connect 9 4 34 1;
 #X connect 10 0 9 1;
@@ -177,9 +174,9 @@ pattern;
 #X connect 37 0 34 1;
 #X connect 38 0 35 0;
 #X connect 39 0 38 1;
-#X connect 64 0 65 0;
-#X connect 64 1 66 0;
-#X connect 64 2 67 0;
-#X connect 74 0 9 1;
-#X connect 75 0 9 1;
-#X connect 76 0 9 1;
+#X connect 45 0 46 0;
+#X connect 45 1 47 0;
+#X connect 45 2 48 0;
+#X connect 50 0 9 1;
+#X connect 51 0 9 1;
+#X connect 52 0 9 1;

@@ -6,6 +6,12 @@ Instruções:
 Executar neste diretorio:
 #pd color_set.pd START.pd
 
+se deseja o help em portugues como padrao
+faça:
+#mv PORTUGUES_nvl-help.pd nvl-help.pd
+#mv PORTUGUES_mininvl-help mininvl-help.pd
+#mv PORTUGUES_nvlvideo-help nvlvideo-help.pd
+
 
 O objeto nvl cria instâncias de um sequenciador de fatias (slices) de .wav que podem ser editadas e salvas na própria interface gráfica deste objeto.
 
@@ -26,9 +32,9 @@ Sequencer (imgs/pattern_sequencer.gif)
 a) Outlet de saída do sincronismo master-slave. Conduz o cursor do sequencer e o bpm atual.
 b) Outlet que mostra a posição atual do cursor.
 c) Sequencia de slices que será executada durante a passagem do cursor master.
-d) Zera todo o pattern de slices.
+d) Simetria das fatias.
 e) Escolhe um número limite de slices que será randomizado e cria uma sequência de números randômicos para um pattern.
-f) Pattern de uma sequencia padrão para frente e para trás.
+f) Pattern de uma sequencia padrão para frente e para trás e zero.
 g) Carrega 10 patterns diferentes que estão salvos na matriz buffer da memoria. Estes patterns são carregados no arquivo .nvl ou podem ser salvos com o procedimento descrito abaixo no item "h".
 h) Botão store (ou atalho shift+s) serve para atualizar no buffer de memória ram (não salva em disco) os atuais presets dos slices e patterns. Para salvar em disco, voce precisa dar um nome de arquivo na janela save_preset do canto inferior direito.
 i) Number box que define o número de células que o cursor vai correr. Isto torna possível fazer uma sequẽncia com tempos ímpares ou diferentes de 8 batidas por compasso.

@@ -26,7 +26,7 @@
 #X text 918 204 in the exact position that were saved - .nvl files.
 ;
 #X text 918 227 Those slices can be played in a non-linear way;
-#N canvas 6 53 1268 686 detalhes-help 1;
+#N canvas 6 53 1268 686 detalhes-help 0;
 #X obj 161 355 cnv 15 300 80 empty empty empty 20 12 0 14 -204767 -66577
 0;
 #X obj 162 358 bng 50 250 50 0 empty empty -->open 50 25 0 30 -164101
@@ -301,14 +301,14 @@ to disk.;
 #X obj 874 358 hsl 30 15 0 1 0 0 empty empty empty -2 -8 0 10 -260097
 -257985 -1 0 1;
 #X floatatom 836 372 5 0 0 0 - - -;
-#X msg 833 72 preset sacrifice.nvl;
+#X msg 833 63 preset sacrifice.nvl;
 #X msg 837 659 mono2x bang;
 #X msg 840 640 normalize bang;
 #X obj 823 440 t b b b;
 #X msg 824 619 preset breakcore.nvl;
 #X msg 822 4 simetria \$1;
 #X floatatom 787 4 5 0 0 0 - - -;
-#X msg 668 4 wav shadebossa.wav;
+#X msg 667 4 wav shadebossa.wav;
 #X connect 5 0 7 0;
 #X connect 5 1 6 0;
 #X connect 5 2 4 0;
